@@ -1,1 +1,65 @@
-[]
+[
+    {
+        "id": "071f8a4b90537c6d",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9ccffe72618812d2",
+        "type": "udp in",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "iface": "",
+        "port": "65516",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "5bc2185f4c5b58cd"
+            ]
+        ]
+    },
+    {
+        "id": "6f63c6e4f8586e97",
+        "type": "udp in",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "iface": "",
+        "port": "65515",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 240,
+        "y": 300,
+        "wires": [
+            [
+                "5bc2185f4c5b58cd"
+            ]
+        ]
+    },
+    {
+        "id": "5bc2185f4c5b58cd",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 340,
+        "wires": []
+    }
+]
