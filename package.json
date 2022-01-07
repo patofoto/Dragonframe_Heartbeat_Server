@@ -1,8 +1,11 @@
 {
     "name": "Untitled",
-    "description": "A Node-RED Project",
-    "version": "0.0.1",
-    "dependencies": {},
+    "description": "Point 72 Cameras Heartbeat",
+    "version": "0.0.2",
+    "dependencies": {
+        "node-red-contrib-telegrambot": "11.0.0",
+        "node-red-contrib-timeout": "1.1.5"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flow.json",
