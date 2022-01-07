@@ -8,6 +8,30 @@
         "env": []
     },
     {
+        "id": "4c0b5a3a04188f08",
+        "type": "telegram bot",
+        "botname": "@patofoto_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
@@ -22,7 +46,8 @@
         "y": 380,
         "wires": [
             [
-                "5bc2185f4c5b58cd"
+                "5bc2185f4c5b58cd",
+                "cc059a6215a718da"
             ]
         ]
     },
@@ -41,7 +66,8 @@
         "y": 300,
         "wires": [
             [
-                "5bc2185f4c5b58cd"
+                "5bc2185f4c5b58cd",
+                "487a16fc60057f15"
             ]
         ]
     },
@@ -58,8 +84,64 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
+        "x": 630,
         "y": 340,
         "wires": []
+    },
+    {
+        "id": "72109cd0facde49a",
+        "type": "telegram sender",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "bot": "4c0b5a3a04188f08",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 960,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "487a16fc60057f15",
+        "type": "timeout",
+        "z": "071f8a4b90537c6d",
+        "name": "Trade Floor Out Message",
+        "outtopic": "",
+        "outsafe": "Safe",
+        "outwarning": "Warning",
+        "outunsafe": "Trade Floor Camera Stopped Transmitting",
+        "warning": "5",
+        "timer": "60",
+        "repeat": false,
+        "again": true,
+        "x": 650,
+        "y": 280,
+        "wires": [
+            [
+                "72109cd0facde49a"
+            ]
+        ]
+    },
+    {
+        "id": "cc059a6215a718da",
+        "type": "timeout",
+        "z": "071f8a4b90537c6d",
+        "name": "Pantry Out Message",
+        "outtopic": "",
+        "outsafe": "Safe",
+        "outwarning": "Warning",
+        "outunsafe": "Pantry Camera Stopped Transmitting",
+        "warning": "5",
+        "timer": "60",
+        "repeat": false,
+        "again": true,
+        "x": 640,
+        "y": 400,
+        "wires": [
+            [
+                "72109cd0facde49a"
+            ]
+        ]
     }
 ]
