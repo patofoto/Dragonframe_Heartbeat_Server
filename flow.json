@@ -11,14 +11,14 @@
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "",
+        "name": "Pantry Camera",
         "iface": "",
         "port": "65516",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 240,
+        "x": 260,
         "y": 380,
         "wires": [
             [
@@ -30,14 +30,14 @@
         "id": "6f63c6e4f8586e97",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "",
+        "name": "Trade Floor Camera",
         "iface": "",
         "port": "65515",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 240,
+        "x": 270,
         "y": 300,
         "wires": [
             [
