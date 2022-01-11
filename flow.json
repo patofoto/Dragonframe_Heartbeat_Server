@@ -14,7 +14,7 @@
         "usernames": "",
         "chatids": "",
         "baseapiurl": "",
-        "updatemode": "polling",
+        "updatemode": "none",
         "pollinterval": "300",
         "usesocks": false,
         "sockshost": "",
@@ -42,8 +42,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 260,
-        "y": 380,
+        "x": 245,
+        "y": 375,
         "wires": [
             [
                 "5bc2185f4c5b58cd",
@@ -62,8 +62,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 270,
-        "y": 300,
+        "x": 255,
+        "y": 330,
         "wires": [
             [
                 "5bc2185f4c5b58cd",
@@ -76,16 +76,16 @@
         "type": "debug",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 630,
-        "y": 340,
+        "x": 595,
+        "y": 345,
         "wires": []
     },
     {
@@ -96,8 +96,8 @@
         "bot": "4c0b5a3a04188f08",
         "haserroroutput": false,
         "outputs": 1,
-        "x": 960,
-        "y": 340,
+        "x": 890,
+        "y": 345,
         "wires": [
             []
         ]
@@ -115,8 +115,8 @@
         "timer": "60",
         "repeat": false,
         "again": true,
-        "x": 650,
-        "y": 280,
+        "x": 590,
+        "y": 285,
         "wires": [
             [
                 "72109cd0facde49a"
@@ -136,8 +136,8 @@
         "timer": "60",
         "repeat": false,
         "again": true,
-        "x": 640,
-        "y": 400,
+        "x": 580,
+        "y": 405,
         "wires": [
             [
                 "72109cd0facde49a"
