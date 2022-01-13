@@ -32,17 +32,150 @@
         "verboselogging": false
     },
     {
+        "id": "648bd60a845b1eb0",
+        "type": "dropbox-config",
+        "name": "Dropbox"
+    },
+    {
+        "id": "e1b2acf529c37dbe",
+        "type": "ui_tab",
+        "name": "Point 72 Camera Data",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7b23a208a0e2b68e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#e32400",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#e32400",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#e32400",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#ff5130",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#e32400",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Point 72 Cameras",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 45,
+                "sy": 25,
+                "gx": 15,
+                "gy": 15,
+                "cx": 10,
+                "cy": 6,
+                "px": 10,
+                "py": 20
+            }
+        }
+    },
+    {
+        "id": "a60279a49b45287e",
+        "type": "ui_group",
+        "name": "Pantry Camera",
+        "tab": "e1b2acf529c37dbe",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4d127de44dfa1ea4",
+        "type": "ui_group",
+        "name": "Trade Floor Camera",
+        "tab": "e1b2acf529c37dbe",
+        "order": 1,
+        "disp": true,
+        "width": "7",
+        "collapse": false,
+        "className": ""
+    },
+    {
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "Pantry Camera",
+        "name": "Pantry Camera Port 65516",
         "iface": "",
         "port": "65516",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 245,
+        "x": 200,
         "y": 375,
         "wires": [
             [
@@ -55,19 +188,19 @@
         "id": "6f63c6e4f8586e97",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "Trade Floor Camera",
+        "name": "Trade Floor Camera Port 65515",
         "iface": "",
         "port": "65515",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 255,
+        "x": 190,
         "y": 330,
         "wires": [
             [
-                "5bc2185f4c5b58cd",
-                "487a16fc60057f15"
+                "487a16fc60057f15",
+                "4545f110b1d8804d"
             ]
         ]
     },
@@ -84,8 +217,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 595,
-        "y": 345,
+        "x": 550,
+        "y": 465,
         "wires": []
     },
     {
@@ -141,6 +274,565 @@
         "wires": [
             [
                 "72109cd0facde49a"
+            ]
+        ]
+    },
+    {
+        "id": "4545f110b1d8804d",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 345,
+        "wires": []
+    },
+    {
+        "id": "e27e4b0a19d19739",
+        "type": "dropbox",
+        "z": "071f8a4b90537c6d",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "pantry_camera_dragonframe_nodered_data.json",
+        "name": "Pantry Camera",
+        "x": 605,
+        "y": 660,
+        "wires": [
+            [
+                "d15d7d8bb2a6fbc4"
+            ]
+        ]
+    },
+    {
+        "id": "417a51db5b220d33",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 825,
+        "wires": []
+    },
+    {
+        "id": "d15d7d8bb2a6fbc4",
+        "type": "json",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 815,
+        "y": 660,
+        "wires": [
+            [
+                "417a51db5b220d33",
+                "c60bcadf5ac7b27f",
+                "39b4a5829ce34edc",
+                "a93d46b10d1b2153",
+                "a7c1a3f325089efb",
+                "54a555d4d929ad13",
+                "427708f0fbf0fa4e",
+                "3959d2152f75d4b5"
+            ]
+        ]
+    },
+    {
+        "id": "c80e293aae93d63f",
+        "type": "dropbox in",
+        "z": "071f8a4b90537c6d",
+        "dropbox": "648bd60a845b1eb0",
+        "filepattern": "*.json",
+        "name": "",
+        "x": 50,
+        "y": 825,
+        "wires": [
+            [
+                "6fb0d62bd19b719f",
+                "643bfc6a934c65d5"
+            ]
+        ]
+    },
+    {
+        "id": "6c85c86c71e00f91",
+        "type": "dropbox",
+        "z": "071f8a4b90537c6d",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "trade_floor_camera_dragonframe_nodered_data.json",
+        "name": "Trade Floor Camera",
+        "x": 625,
+        "y": 1005,
+        "wires": [
+            [
+                "ed29c4b6d9d19c6c"
+            ]
+        ]
+    },
+    {
+        "id": "ed29c4b6d9d19c6c",
+        "type": "json",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 815,
+        "y": 1005,
+        "wires": [
+            [
+                "eee8603e784ae913",
+                "0592f63c821d433a",
+                "866917a96d7221b1",
+                "48bde8f7888a973e",
+                "30f039c559e8484e",
+                "fd70c3acb6a319ab",
+                "bc55a9dd4a8bb341",
+                "4e3409ae52b9d3e7"
+            ]
+        ]
+    },
+    {
+        "id": "c60bcadf5ac7b27f",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Camera Name",
+        "label": "Camera Name",
+        "format": "{{msg.payload.camera_name}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 510,
+        "wires": []
+    },
+    {
+        "id": "39b4a5829ce34edc",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Interval",
+        "label": "Interval",
+        "format": "{{msg.payload.interval_min}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 555,
+        "wires": []
+    },
+    {
+        "id": "a93d46b10d1b2153",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Time Start",
+        "label": "Time Start (24hrs)",
+        "format": "{{msg.payload.time_start_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "a7c1a3f325089efb",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Time End",
+        "label": "Time End (24hrs)",
+        "format": "{{msg.payload.time_end_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 645,
+        "wires": []
+    },
+    {
+        "id": "54a555d4d929ad13",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Total Current Frames",
+        "label": "Total Current Frames Shot",
+        "format": "{{msg.payload.current_total_frames}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 690,
+        "wires": []
+    },
+    {
+        "id": "427708f0fbf0fa4e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Current Daily Frame",
+        "label": "Current Daily Frame",
+        "format": "{{msg.payload.current_daily_frame}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 735,
+        "wires": []
+    },
+    {
+        "id": "3959d2152f75d4b5",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Current Shot Size",
+        "label": "Current Shot Size (Gb)",
+        "format": "{{msg.payload.current_shot_size_Gb}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "4e3409ae52b9d3e7",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "eee8603e784ae913",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Camera Name",
+        "label": "Camera Name",
+        "format": "{{msg.payload.camera_name}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1010,
+        "y": 885,
+        "wires": []
+    },
+    {
+        "id": "0592f63c821d433a",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Interval",
+        "label": "Interval",
+        "format": "{{msg.payload.interval_min}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 930,
+        "wires": []
+    },
+    {
+        "id": "866917a96d7221b1",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "Time Start",
+        "label": "Time Start (24hrs)",
+        "format": "{{msg.payload.time_start_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1000,
+        "y": 975,
+        "wires": []
+    },
+    {
+        "id": "48bde8f7888a973e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Time End",
+        "label": "Time End (24hrs)",
+        "format": "{{msg.payload.time_end_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 990,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "30f039c559e8484e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Total Current Frames",
+        "label": "Total Current Frames Shot",
+        "format": "{{msg.payload.current_total_frames}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 1065,
+        "wires": []
+    },
+    {
+        "id": "fd70c3acb6a319ab",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Current Daily Frame",
+        "label": "Current Daily Frame",
+        "format": "{{msg.payload.current_daily_frame}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1030,
+        "y": 1110,
+        "wires": []
+    },
+    {
+        "id": "bc55a9dd4a8bb341",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Current Shot Size",
+        "label": "Current Shot Size (Gb)",
+        "format": "{{msg.payload.current_shot_size_Gb}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1020,
+        "y": 1155,
+        "wires": []
+    },
+    {
+        "id": "6fb0d62bd19b719f",
+        "type": "delay",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 225,
+        "y": 780,
+        "wires": [
+            [
+                "1c955c88c2a58966"
+            ]
+        ]
+    },
+    {
+        "id": "1c955c88c2a58966",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pantry_camera_dragonframe_nodered_data.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 395,
+        "y": 660,
+        "wires": [
+            [
+                "e27e4b0a19d19739"
+            ]
+        ]
+    },
+    {
+        "id": "b8c23bbe5e25458b",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "trade_floor_camera_dragonframe_nodered_data.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 395,
+        "y": 1005,
+        "wires": [
+            [
+                "6c85c86c71e00f91"
+            ]
+        ]
+    },
+    {
+        "id": "da4fb001572b96d7",
+        "type": "inject",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 165,
+        "y": 1005,
+        "wires": [
+            [
+                "b8c23bbe5e25458b"
+            ]
+        ]
+    },
+    {
+        "id": "128218de104975d2",
+        "type": "inject",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "1c955c88c2a58966"
+            ]
+        ]
+    },
+    {
+        "id": "3be9cc655fc84ced",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last Triggered",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 755,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "643bfc6a934c65d5",
+        "type": "delay",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 225,
+        "y": 885,
+        "wires": [
+            [
+                "b8c23bbe5e25458b"
             ]
         ]
     }
