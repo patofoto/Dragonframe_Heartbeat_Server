@@ -229,7 +229,7 @@
         "warning": "0",
         "timer": "60",
         "repeat": true,
-        "again": true,
+        "again": false,
         "x": 500,
         "y": 135,
         "wires": [
@@ -251,7 +251,7 @@
         "warning": "0",
         "timer": "60",
         "repeat": true,
-        "again": true,
+        "again": false,
         "x": 490,
         "y": 255,
         "wires": [
