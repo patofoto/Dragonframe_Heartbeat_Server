@@ -8,30 +8,6 @@
         "env": []
     },
     {
-        "id": "4c0b5a3a04188f08",
-        "type": "telegram bot",
-        "botname": "@patofoto_bot",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "updatemode": "none",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksport": "6667",
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "botpath": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "sslterminated": false,
-        "verboselogging": false
-    },
-    {
         "id": "648bd60a845b1eb0",
         "type": "dropbox-config",
         "name": "Dropbox"
@@ -131,13 +107,13 @@
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
-                "sx": 45,
+                "sx": 50,
                 "sy": 25,
-                "gx": 15,
+                "gx": 10,
                 "gy": 15,
-                "cx": 10,
+                "cx": 25,
                 "cy": 6,
-                "px": 10,
+                "px": 5,
                 "py": 20
             }
         }
@@ -165,6 +141,26 @@
         "className": ""
     },
     {
+        "id": "d17fd3106744b6d1",
+        "type": "ui_spacer",
+        "z": "071f8a4b90537c6d",
+        "name": "spacer",
+        "group": "4d127de44dfa1ea4",
+        "order": 3,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "7519439585950272",
+        "type": "ui_spacer",
+        "z": "071f8a4b90537c6d",
+        "name": "spacer",
+        "group": "a60279a49b45287e",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
@@ -175,8 +171,8 @@
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 200,
-        "y": 375,
+        "x": 170,
+        "y": 285,
         "wires": [
             [
                 "5bc2185f4c5b58cd",
@@ -196,7 +192,7 @@
         "group": "",
         "datatype": "utf8",
         "x": 190,
-        "y": 330,
+        "y": 165,
         "wires": [
             [
                 "487a16fc60057f15",
@@ -217,23 +213,9 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 465,
+        "x": 460,
+        "y": 315,
         "wires": []
-    },
-    {
-        "id": "72109cd0facde49a",
-        "type": "telegram sender",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "bot": "4c0b5a3a04188f08",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 890,
-        "y": 345,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "487a16fc60057f15",
@@ -241,18 +223,19 @@
         "z": "071f8a4b90537c6d",
         "name": "Trade Floor Out Message",
         "outtopic": "",
-        "outsafe": "Safe",
-        "outwarning": "Warning",
-        "outunsafe": "Trade Floor Camera Stopped Transmitting",
-        "warning": "5",
+        "outsafe": "Trade Floor Comm is alive",
+        "outwarning": "",
+        "outunsafe": "Trade Floor Computer stopped transmitting",
+        "warning": "0",
         "timer": "60",
-        "repeat": false,
+        "repeat": true,
         "again": true,
-        "x": 590,
-        "y": 285,
+        "x": 500,
+        "y": 135,
         "wires": [
             [
-                "72109cd0facde49a"
+                "278f1e2d358d64cc",
+                "43f80bf3b24dca39"
             ]
         ]
     },
@@ -262,18 +245,19 @@
         "z": "071f8a4b90537c6d",
         "name": "Pantry Out Message",
         "outtopic": "",
-        "outsafe": "Safe",
-        "outwarning": "Warning",
-        "outunsafe": "Pantry Camera Stopped Transmitting",
-        "warning": "5",
+        "outsafe": "Pantry Comm is alive",
+        "outwarning": "",
+        "outunsafe": "Pantry Computer Stopped Transmitting",
+        "warning": "0",
         "timer": "60",
-        "repeat": false,
+        "repeat": true,
         "again": true,
-        "x": 580,
-        "y": 405,
+        "x": 490,
+        "y": 255,
         "wires": [
             [
-                "72109cd0facde49a"
+                "b43aa44b8046add8",
+                "0d3eadbcaaeedad8"
             ]
         ]
     },
@@ -289,64 +273,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 550,
-        "y": 345,
+        "x": 460,
+        "y": 195,
         "wires": []
-    },
-    {
-        "id": "e27e4b0a19d19739",
-        "type": "dropbox",
-        "z": "071f8a4b90537c6d",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "pantry_camera_dragonframe_nodered_data.json",
-        "name": "Pantry Camera",
-        "x": 605,
-        "y": 660,
-        "wires": [
-            [
-                "d15d7d8bb2a6fbc4"
-            ]
-        ]
-    },
-    {
-        "id": "417a51db5b220d33",
-        "type": "debug",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 825,
-        "wires": []
-    },
-    {
-        "id": "d15d7d8bb2a6fbc4",
-        "type": "json",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 815,
-        "y": 660,
-        "wires": [
-            [
-                "417a51db5b220d33",
-                "c60bcadf5ac7b27f",
-                "39b4a5829ce34edc",
-                "a93d46b10d1b2153",
-                "a7c1a3f325089efb",
-                "54a555d4d929ad13",
-                "427708f0fbf0fa4e",
-                "3959d2152f75d4b5"
-            ]
-        ]
     },
     {
         "id": "c80e293aae93d63f",
@@ -355,8 +284,8 @@
         "dropbox": "648bd60a845b1eb0",
         "filepattern": "*.json",
         "name": "",
-        "x": 50,
-        "y": 825,
+        "x": 110,
+        "y": 855,
         "wires": [
             [
                 "6fb0d62bd19b719f",
@@ -370,292 +299,14 @@
         "z": "071f8a4b90537c6d",
         "dropbox": "648bd60a845b1eb0",
         "filename": "trade_floor_camera_dragonframe_nodered_data.json",
-        "name": "Trade Floor Camera",
-        "x": 625,
-        "y": 1005,
+        "name": "Trade Floor Camera Shot Info",
+        "x": 685,
+        "y": 1035,
         "wires": [
             [
                 "ed29c4b6d9d19c6c"
             ]
         ]
-    },
-    {
-        "id": "ed29c4b6d9d19c6c",
-        "type": "json",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": false,
-        "x": 815,
-        "y": 1005,
-        "wires": [
-            [
-                "eee8603e784ae913",
-                "0592f63c821d433a",
-                "866917a96d7221b1",
-                "48bde8f7888a973e",
-                "30f039c559e8484e",
-                "fd70c3acb6a319ab",
-                "bc55a9dd4a8bb341",
-                "4e3409ae52b9d3e7"
-            ]
-        ]
-    },
-    {
-        "id": "c60bcadf5ac7b27f",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Camera Name",
-        "label": "Camera Name",
-        "format": "{{msg.payload.camera_name}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1010,
-        "y": 510,
-        "wires": []
-    },
-    {
-        "id": "39b4a5829ce34edc",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Interval",
-        "label": "Interval",
-        "format": "{{msg.payload.interval_min}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 990,
-        "y": 555,
-        "wires": []
-    },
-    {
-        "id": "a93d46b10d1b2153",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Time Start",
-        "label": "Time Start (24hrs)",
-        "format": "{{msg.payload.time_start_24}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1000,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "a7c1a3f325089efb",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "Time End",
-        "label": "Time End (24hrs)",
-        "format": "{{msg.payload.time_end_24}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 990,
-        "y": 645,
-        "wires": []
-    },
-    {
-        "id": "54a555d4d929ad13",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "Total Current Frames",
-        "label": "Total Current Frames Shot",
-        "format": "{{msg.payload.current_total_frames}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 690,
-        "wires": []
-    },
-    {
-        "id": "427708f0fbf0fa4e",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "Current Daily Frame",
-        "label": "Current Daily Frame",
-        "format": "{{msg.payload.current_daily_frame}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 735,
-        "wires": []
-    },
-    {
-        "id": "3959d2152f75d4b5",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Current Shot Size",
-        "label": "Current Shot Size (Gb)",
-        "format": "{{msg.payload.current_shot_size_Gb}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1020,
-        "y": 780,
-        "wires": []
-    },
-    {
-        "id": "4e3409ae52b9d3e7",
-        "type": "debug",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1000,
-        "y": 1200,
-        "wires": []
-    },
-    {
-        "id": "eee8603e784ae913",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Camera Name",
-        "label": "Camera Name",
-        "format": "{{msg.payload.camera_name}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1010,
-        "y": 885,
-        "wires": []
-    },
-    {
-        "id": "0592f63c821d433a",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "Interval",
-        "label": "Interval",
-        "format": "{{msg.payload.interval_min}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 990,
-        "y": 930,
-        "wires": []
-    },
-    {
-        "id": "866917a96d7221b1",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "Time Start",
-        "label": "Time Start (24hrs)",
-        "format": "{{msg.payload.time_start_24}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1000,
-        "y": 975,
-        "wires": []
-    },
-    {
-        "id": "48bde8f7888a973e",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "Time End",
-        "label": "Time End (24hrs)",
-        "format": "{{msg.payload.time_end_24}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 990,
-        "y": 1020,
-        "wires": []
-    },
-    {
-        "id": "30f039c559e8484e",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "name": "Total Current Frames",
-        "label": "Total Current Frames Shot",
-        "format": "{{msg.payload.current_total_frames}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 1065,
-        "wires": []
-    },
-    {
-        "id": "fd70c3acb6a319ab",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "Current Daily Frame",
-        "label": "Current Daily Frame",
-        "format": "{{msg.payload.current_daily_frame}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1030,
-        "y": 1110,
-        "wires": []
-    },
-    {
-        "id": "bc55a9dd4a8bb341",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Current Shot Size",
-        "label": "Current Shot Size (Gb)",
-        "format": "{{msg.payload.current_shot_size_Gb}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 1020,
-        "y": 1155,
-        "wires": []
     },
     {
         "id": "6fb0d62bd19b719f",
@@ -674,38 +325,11 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 225,
-        "y": 780,
+        "x": 270,
+        "y": 810,
         "wires": [
             [
                 "1c955c88c2a58966"
-            ]
-        ]
-    },
-    {
-        "id": "1c955c88c2a58966",
-        "type": "change",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "pantry_camera_dragonframe_nodered_data.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 395,
-        "y": 660,
-        "wires": [
-            [
-                "e27e4b0a19d19739"
             ]
         ]
     },
@@ -728,8 +352,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 395,
-        "y": 1005,
+        "x": 455,
+        "y": 1035,
         "wires": [
             [
                 "6c85c86c71e00f91"
@@ -757,8 +381,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 165,
-        "y": 1005,
+        "x": 225,
+        "y": 1035,
         "wires": [
             [
                 "b8c23bbe5e25458b"
@@ -773,10 +397,6 @@
         "props": [
             {
                 "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
             }
         ],
         "repeat": "",
@@ -784,32 +404,14 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
         "payloadType": "date",
-        "x": 160,
-        "y": 660,
+        "x": 220,
+        "y": 690,
         "wires": [
             [
                 "1c955c88c2a58966"
             ]
         ]
-    },
-    {
-        "id": "3be9cc655fc84ced",
-        "type": "ui_text",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Last Triggered",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "className": "",
-        "x": 755,
-        "y": 720,
-        "wires": []
     },
     {
         "id": "643bfc6a934c65d5",
@@ -828,11 +430,721 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 225,
-        "y": 885,
+        "x": 270,
+        "y": 900,
         "wires": [
             [
                 "b8c23bbe5e25458b"
+            ]
+        ]
+    },
+    {
+        "id": "b43aa44b8046add8",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 710,
+        "y": 255,
+        "wires": []
+    },
+    {
+        "id": "43f80bf3b24dca39",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 715,
+        "y": 75,
+        "wires": []
+    },
+    {
+        "id": "1c955c88c2a58966",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "pantry_camera_dragonframe_nodered_data.json",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 455,
+        "y": 690,
+        "wires": [
+            [
+                "e27e4b0a19d19739"
+            ]
+        ]
+    },
+    {
+        "id": "e27e4b0a19d19739",
+        "type": "dropbox",
+        "z": "071f8a4b90537c6d",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "pantry_camera_dragonframe_nodered_data.json",
+        "name": "Pantry Camera Shot Info",
+        "x": 680,
+        "y": 690,
+        "wires": [
+            [
+                "d15d7d8bb2a6fbc4"
+            ]
+        ]
+    },
+    {
+        "id": "ed29c4b6d9d19c6c",
+        "type": "json",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 920,
+        "y": 1035,
+        "wires": [
+            [
+                "eee8603e784ae913",
+                "0592f63c821d433a",
+                "866917a96d7221b1",
+                "48bde8f7888a973e",
+                "30f039c559e8484e",
+                "fd70c3acb6a319ab",
+                "bc55a9dd4a8bb341",
+                "4e3409ae52b9d3e7",
+                "4c453a06918bb926"
+            ]
+        ]
+    },
+    {
+        "id": "4e3409ae52b9d3e7",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1225,
+        "y": 1215,
+        "wires": []
+    },
+    {
+        "id": "eee8603e784ae913",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Camera Name",
+        "label": "Camera Name",
+        "format": "{{msg.payload.camera_name}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1235,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "0592f63c821d433a",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Interval",
+        "label": "Interval",
+        "format": "{{msg.payload.interval_min}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1215,
+        "y": 945,
+        "wires": []
+    },
+    {
+        "id": "866917a96d7221b1",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Time Start",
+        "label": "Time Start (24hrs)",
+        "format": "{{msg.payload.time_start_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1225,
+        "y": 990,
+        "wires": []
+    },
+    {
+        "id": "48bde8f7888a973e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Time End",
+        "label": "Time End (24hrs)",
+        "format": "{{msg.payload.time_end_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1215,
+        "y": 1035,
+        "wires": []
+    },
+    {
+        "id": "30f039c559e8484e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "Total Current Frames",
+        "label": "Total Current Frames Shot",
+        "format": "{{msg.payload.current_total_frames}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1255,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "fd70c3acb6a319ab",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "Current Daily Frame",
+        "label": "Current Daily Frame",
+        "format": "{{msg.payload.current_daily_frame}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1255,
+        "y": 1125,
+        "wires": []
+    },
+    {
+        "id": "bc55a9dd4a8bb341",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "Current Shot Size",
+        "label": "Current Shot Size (Gb)",
+        "format": "{{msg.payload.current_shot_size_Gb}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1245,
+        "y": 1170,
+        "wires": []
+    },
+    {
+        "id": "598d9e5be063516d",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last Triggered",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1460,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "4c453a06918bb926",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Trade Floor",
+        "input": "current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss on MM-DD-YYYY",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1225,
+        "y": 1260,
+        "wires": [
+            [
+                "598d9e5be063516d"
+            ]
+        ]
+    },
+    {
+        "id": "417a51db5b220d33",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1225,
+        "y": 795,
+        "wires": []
+    },
+    {
+        "id": "d15d7d8bb2a6fbc4",
+        "type": "json",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 920,
+        "y": 690,
+        "wires": [
+            [
+                "417a51db5b220d33",
+                "c60bcadf5ac7b27f",
+                "39b4a5829ce34edc",
+                "a93d46b10d1b2153",
+                "a7c1a3f325089efb",
+                "54a555d4d929ad13",
+                "427708f0fbf0fa4e",
+                "3959d2152f75d4b5",
+                "40a49ba707237883"
+            ]
+        ]
+    },
+    {
+        "id": "c60bcadf5ac7b27f",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "Camera Name",
+        "label": "Camera Name",
+        "format": "{{msg.payload.camera_name}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1235,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "39b4a5829ce34edc",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Interval",
+        "label": "Interval",
+        "format": "{{msg.payload.interval_min}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1215,
+        "y": 525,
+        "wires": []
+    },
+    {
+        "id": "a93d46b10d1b2153",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "Time Start",
+        "label": "Time Start (24hrs)",
+        "format": "{{msg.payload.time_start_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1225,
+        "y": 570,
+        "wires": []
+    },
+    {
+        "id": "a7c1a3f325089efb",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "Time End",
+        "label": "Time End (24hrs)",
+        "format": "{{msg.payload.time_end_24}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1215,
+        "y": 615,
+        "wires": []
+    },
+    {
+        "id": "54a555d4d929ad13",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "Total Current Frames",
+        "label": "Total Current Frames Shot",
+        "format": "{{msg.payload.current_total_frames}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1255,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "427708f0fbf0fa4e",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "name": "Current Daily Frame",
+        "label": "Current Daily Frame",
+        "format": "{{msg.payload.current_daily_frame}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1255,
+        "y": 705,
+        "wires": []
+    },
+    {
+        "id": "3959d2152f75d4b5",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "name": "Current Shot Size",
+        "label": "Current Shot Size (Gb)",
+        "format": "{{msg.payload.current_shot_size_Gb}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1245,
+        "y": 750,
+        "wires": []
+    },
+    {
+        "id": "3be9cc655fc84ced",
+        "type": "ui_text",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Last Triggered",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1460,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "40a49ba707237883",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Pantry",
+        "input": "current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss on MM-DD-YYYY",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1205,
+        "y": 840,
+        "wires": [
+            [
+                "3be9cc655fc84ced"
+            ]
+        ]
+    },
+    {
+        "id": "32b0c0cea2b31e73",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Connected",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "",
+        "x": 1070,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "278f1e2d358d64cc",
+        "type": "switch",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "alive",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stopped",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 135,
+        "wires": [
+            [
+                "e6a3e0f13d4cb684"
+            ],
+            [
+                "a9a597564d32de4a"
+            ]
+        ]
+    },
+    {
+        "id": "e6a3e0f13d4cb684",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 105,
+        "wires": [
+            [
+                "32b0c0cea2b31e73"
+            ]
+        ]
+    },
+    {
+        "id": "a9a597564d32de4a",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 150,
+        "wires": [
+            [
+                "32b0c0cea2b31e73"
+            ]
+        ]
+    },
+    {
+        "id": "a129442f0a4143e0",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Connected",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "",
+        "x": 1070,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "0d3eadbcaaeedad8",
+        "type": "switch",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "alive",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "stopped",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 710,
+        "y": 315,
+        "wires": [
+            [
+                "e04e8cc5107b9365"
+            ],
+            [
+                "f1e89ed72535f214"
+            ]
+        ]
+    },
+    {
+        "id": "e04e8cc5107b9365",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 285,
+        "wires": [
+            [
+                "a129442f0a4143e0"
+            ]
+        ]
+    },
+    {
+        "id": "f1e89ed72535f214",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 890,
+        "y": 330,
+        "wires": [
+            [
+                "a129442f0a4143e0"
             ]
         ]
     }
