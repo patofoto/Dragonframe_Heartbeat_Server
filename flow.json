@@ -161,6 +161,30 @@
         "height": 1
     },
     {
+        "id": "dc0a930d12b3acbd",
+        "type": "telegram bot",
+        "botname": "@patofoto_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
+    },
+    {
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
@@ -541,7 +565,7 @@
         "type": "debug",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -719,7 +743,7 @@
         "type": "debug",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1028,7 +1052,8 @@
         "y": 150,
         "wires": [
             [
-                "32b0c0cea2b31e73"
+                "32b0c0cea2b31e73",
+                "861da33f12713922"
             ]
         ]
     },
@@ -1144,8 +1169,79 @@
         "y": 330,
         "wires": [
             [
-                "a129442f0a4143e0"
+                "a129442f0a4143e0",
+                "4869966d6f9a8036"
             ]
         ]
+    },
+    {
+        "id": "09a02fd8eb7ae536",
+        "type": "telegram sender",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "bot": "dc0a930d12b3acbd",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1355,
+        "y": 255,
+        "wires": [
+            [
+                "d582fb85641f3238"
+            ]
+        ]
+    },
+    {
+        "id": "861da33f12713922",
+        "type": "function",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "func": "msg.payload = {\n    content: 'Trade Floor computer stopped communicating',\n    type:\"message\",\n    chatId: 1951007350,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 165,
+        "wires": [
+            [
+                "09a02fd8eb7ae536"
+            ]
+        ]
+    },
+    {
+        "id": "4869966d6f9a8036",
+        "type": "function",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "func": "msg.payload = {\n    content: 'Pantry computer stopped communicating',\n    type:\"message\",\n    chatId: 1951007350,\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 360,
+        "wires": [
+            [
+                "09a02fd8eb7ae536"
+            ]
+        ]
+    },
+    {
+        "id": "d582fb85641f3238",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 255,
+        "wires": []
     }
 ]
