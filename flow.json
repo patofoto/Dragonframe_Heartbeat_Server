@@ -8,6 +8,14 @@
         "env": []
     },
     {
+        "id": "77efff399d3d27cc",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "648bd60a845b1eb0",
         "type": "dropbox-config",
         "name": "Dropbox"
@@ -107,13 +115,13 @@
             "allowTempTheme": "true",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
-                "sx": 30,
+                "sx": 48,
                 "sy": 25,
-                "gx": 10,
-                "gy": 15,
-                "cx": 25,
+                "gx": 6,
+                "gy": 6,
+                "cx": 10,
                 "cy": 6,
-                "px": 5,
+                "px": 20,
                 "py": 20
             }
         }
@@ -284,22 +292,6 @@
                 "0d3eadbcaaeedad8"
             ]
         ]
-    },
-    {
-        "id": "4545f110b1d8804d",
-        "type": "debug",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 460,
-        "y": 195,
-        "wires": []
     },
     {
         "id": "6c85c86c71e00f91",
@@ -766,7 +758,7 @@
         "type": "debug",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -784,8 +776,8 @@
         "name": "",
         "property": "payload",
         "action": "",
-        "pretty": false,
-        "x": 950,
+        "pretty": true,
+        "x": 935,
         "y": 1140,
         "wires": [
             [
@@ -962,7 +954,7 @@
         "z": "071f8a4b90537c6d",
         "name": "",
         "topic": "Trade Floor Time",
-        "input": "current_shot_time",
+        "input": "payload.current_shot_time",
         "inputType": "msg",
         "inTz": "America/New_York",
         "adjAmount": 0,
@@ -1004,13 +996,13 @@
         "z": "071f8a4b90537c6d",
         "name": "",
         "topic": "Trade Floor Date",
-        "input": "current_shot_time",
+        "input": "payload.current_shot_time",
         "inputType": "msg",
         "inTz": "America/New_York",
         "adjAmount": 0,
         "adjType": "days",
         "adjDir": "add",
-        "format": "MM/DD/YYYY",
+        "format": "ddd, MMM Do, YYYY",
         "locale": "en-US",
         "output": "payload",
         "outputType": "msg",
@@ -1072,8 +1064,8 @@
         "name": "",
         "property": "payload",
         "action": "",
-        "pretty": false,
-        "x": 950,
+        "pretty": true,
+        "x": 935,
         "y": 660,
         "wires": [
             [
@@ -1086,8 +1078,8 @@
                 "3959d2152f75d4b5",
                 "40a49ba707237883",
                 "b53e1ab37122f002",
-                "bb20cf90421d90ae",
-                "417a51db5b220d33"
+                "417a51db5b220d33",
+                "bb20cf90421d90ae"
             ]
         ]
     },
@@ -1244,7 +1236,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1490,
+        "x": 1520,
         "y": 750,
         "wires": [],
         "inputLabels": [
@@ -1256,8 +1248,8 @@
         "type": "moment",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "topic": "Time",
-        "input": "current_shot_time",
+        "topic": "Pantry Time",
+        "input": "payload.current_shot_time",
         "inputType": "msg",
         "inTz": "America/New_York",
         "adjAmount": 0,
@@ -1268,7 +1260,7 @@
         "output": "payload",
         "outputType": "msg",
         "outTz": "America/New_York",
-        "x": 1325,
+        "x": 1345,
         "y": 750,
         "wires": [
             [
@@ -1281,19 +1273,19 @@
         "type": "moment",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "topic": "Date",
-        "input": "current_shot_time",
+        "topic": "Pantry Date",
+        "input": "payload.current_shot_time",
         "inputType": "msg",
         "inTz": "America/New_York",
         "adjAmount": 0,
         "adjType": "days",
         "adjDir": "add",
-        "format": "MM/DD/YYYY",
+        "format": "ddd, MMM Do, YYYY",
         "locale": "en-US",
         "output": "payload",
         "outputType": "msg",
         "outTz": "America/New_York",
-        "x": 1325,
+        "x": 1345,
         "y": 795,
         "wires": [
             [
@@ -1314,7 +1306,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
-        "x": 1490,
+        "x": 1520,
         "y": 795,
         "wires": [],
         "inputLabels": [
@@ -1347,7 +1339,7 @@
         "z": "071f8a4b90537c6d",
         "name": "",
         "topic": "Time",
-        "input": "payload.computer_uptime.uptime",
+        "input": "payload.computer_uptime",
         "inputType": "msg",
         "inTz": "America/New_York",
         "adjAmount": 0,
@@ -1382,5 +1374,304 @@
         "x": 1345,
         "y": 885,
         "wires": []
+    },
+    {
+        "id": "4545f110b1d8804d",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "b462c02dc644ac1e",
+        "type": "udp out",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "addr": "patofoto.duckdns.org",
+        "iface": "",
+        "port": "65517",
+        "ipv": "udp4",
+        "outport": "",
+        "base64": false,
+        "multicast": "false",
+        "x": 470,
+        "y": 570,
+        "wires": []
+    },
+    {
+        "id": "2848b5b115d35721",
+        "type": "inject",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 105,
+        "y": 570,
+        "wires": [
+            [
+                "b462c02dc644ac1e"
+            ]
+        ]
+    },
+    {
+        "id": "31fb8ebbf0703b88",
+        "type": "countula",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "f53e9db4f0029f61"
+            ],
+            [
+                "0979e3abb46da9c9"
+            ]
+        ]
+    },
+    {
+        "id": "f53e9db4f0029f61",
+        "type": "debug",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 815,
+        "y": 270,
+        "wires": []
+    },
+    {
+        "id": "0979e3abb46da9c9",
+        "type": "debug",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 815,
+        "y": 330,
+        "wires": []
+    },
+    {
+        "id": "b35626290de42cc6",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "hello",
+        "payloadType": "str",
+        "x": 230,
+        "y": 300,
+        "wires": [
+            [
+                "31fb8ebbf0703b88"
+            ]
+        ]
+    },
+    {
+        "id": "fc740c8f4eca86ae",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "SET",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 420,
+        "wires": [
+            [
+                "30b2629ab1dbd717"
+            ]
+        ]
+    },
+    {
+        "id": "30b2629ab1dbd717",
+        "type": "change",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 420,
+        "wires": [
+            [
+                "31fb8ebbf0703b88"
+            ]
+        ]
+    },
+    {
+        "id": "76d3246f4c2a0c90",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "RESET",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 465,
+        "wires": [
+            [
+                "cad65c8157e8c6b6"
+            ]
+        ]
+    },
+    {
+        "id": "cad65c8157e8c6b6",
+        "type": "change",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "RESET",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 465,
+        "wires": [
+            [
+                "31fb8ebbf0703b88"
+            ]
+        ]
+    },
+    {
+        "id": "a3a3c43fbbbb33a2",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "SET 1",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 510,
+        "wires": [
+            [
+                "a7a0f2d1b332383e"
+            ]
+        ]
+    },
+    {
+        "id": "a7a0f2d1b332383e",
+        "type": "change",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 510,
+        "wires": [
+            [
+                "31fb8ebbf0703b88"
+            ]
+        ]
     }
 ]
