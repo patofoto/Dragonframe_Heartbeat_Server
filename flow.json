@@ -16,17 +16,28 @@
         "env": []
     },
     {
-        "id": "648bd60a845b1eb0",
-        "type": "dropbox-config",
-        "name": "Dropbox"
-    },
-    {
-        "id": "e1b2acf529c37dbe",
-        "type": "ui_tab",
-        "name": "Point 72 Camera Data",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "dc0a930d12b3acbd",
+        "type": "telegram bot",
+        "botname": "@patofoto_bot",
+        "usernames": "",
+        "chatids": "",
+        "baseapiurl": "",
+        "updatemode": "polling",
+        "pollinterval": "300",
+        "usesocks": false,
+        "sockshost": "",
+        "socksport": "6667",
+        "socksusername": "anonymous",
+        "sockspassword": "",
+        "bothost": "",
+        "botpath": "",
+        "localbotport": "8443",
+        "publicbotport": "8443",
+        "privatekey": "",
+        "certificate": "",
+        "useselfsignedcertificate": false,
+        "sslterminated": false,
+        "verboselogging": false
     },
     {
         "id": "7b23a208a0e2b68e",
@@ -127,6 +138,14 @@
         }
     },
     {
+        "id": "e1b2acf529c37dbe",
+        "type": "ui_tab",
+        "name": "Point 72 Camera Data",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "a60279a49b45287e",
         "type": "ui_group",
         "name": "Pantry Camera",
@@ -169,28 +188,9 @@
         "height": 1
     },
     {
-        "id": "dc0a930d12b3acbd",
-        "type": "telegram bot",
-        "botname": "@patofoto_bot",
-        "usernames": "",
-        "chatids": "",
-        "baseapiurl": "",
-        "updatemode": "polling",
-        "pollinterval": "300",
-        "usesocks": false,
-        "sockshost": "",
-        "socksport": "6667",
-        "socksusername": "anonymous",
-        "sockspassword": "",
-        "bothost": "",
-        "botpath": "",
-        "localbotport": "8443",
-        "publicbotport": "8443",
-        "privatekey": "",
-        "certificate": "",
-        "useselfsignedcertificate": false,
-        "sslterminated": false,
-        "verboselogging": false
+        "id": "648bd60a845b1eb0",
+        "type": "dropbox-config",
+        "name": "Dropbox"
     },
     {
         "id": "3b327eeb736a7eca",
@@ -201,9 +201,9 @@
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "Pantry Camera Port 65516",
+        "name": "Pantry Camera Port 65519",
         "iface": "",
-        "port": "65516",
+        "port": "65519",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
@@ -253,65 +253,6 @@
         "x": 460,
         "y": 315,
         "wires": []
-    },
-    {
-        "id": "487a16fc60057f15",
-        "type": "timeout",
-        "z": "071f8a4b90537c6d",
-        "name": "Trade Floor Out Message",
-        "outtopic": "",
-        "outsafe": "Trade Floor Comm is alive",
-        "outwarning": "",
-        "outunsafe": "Trade Floor Computer stopped transmitting",
-        "warning": "0",
-        "timer": "60",
-        "repeat": true,
-        "again": false,
-        "x": 500,
-        "y": 135,
-        "wires": [
-            [
-                "278f1e2d358d64cc",
-                "43f80bf3b24dca39"
-            ]
-        ]
-    },
-    {
-        "id": "cc059a6215a718da",
-        "type": "timeout",
-        "z": "071f8a4b90537c6d",
-        "name": "Pantry Out Message",
-        "outtopic": "",
-        "outsafe": "Pantry Comm is alive",
-        "outwarning": "",
-        "outunsafe": "Pantry Computer Stopped Transmitting",
-        "warning": "0",
-        "timer": "60",
-        "repeat": true,
-        "again": false,
-        "x": 490,
-        "y": 255,
-        "wires": [
-            [
-                "b43aa44b8046add8",
-                "0d3eadbcaaeedad8"
-            ]
-        ]
-    },
-    {
-        "id": "6c85c86c71e00f91",
-        "type": "dropbox",
-        "z": "071f8a4b90537c6d",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "Trade Floor Camera Shot Info",
-        "x": 715,
-        "y": 1140,
-        "wires": [
-            [
-                "ed29c4b6d9d19c6c"
-            ]
-        ]
     },
     {
         "id": "b8c23bbe5e25458b",
@@ -384,7 +325,7 @@
         "onceDelay": 0.1,
         "topic": "",
         "payloadType": "date",
-        "x": 250,
+        "x": 270,
         "y": 660,
         "wires": [
             [
@@ -450,52 +391,6 @@
                 "e27e4b0a19d19739"
             ]
         ]
-    },
-    {
-        "id": "e27e4b0a19d19739",
-        "type": "dropbox",
-        "z": "071f8a4b90537c6d",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "Pantry Camera Shot Info",
-        "x": 710,
-        "y": 660,
-        "wires": [
-            [
-                "d15d7d8bb2a6fbc4"
-            ]
-        ]
-    },
-    {
-        "id": "32b0c0cea2b31e73",
-        "type": "ui_led",
-        "z": "071f8a4b90537c6d",
-        "order": 5,
-        "group": "a60279a49b45287e",
-        "width": 0,
-        "height": 0,
-        "label": "Connected",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "",
-        "x": 1070,
-        "y": 120,
-        "wires": []
     },
     {
         "id": "278f1e2d358d64cc",
@@ -586,37 +481,6 @@
         ]
     },
     {
-        "id": "a129442f0a4143e0",
-        "type": "ui_led",
-        "z": "071f8a4b90537c6d",
-        "order": 5,
-        "group": "4d127de44dfa1ea4",
-        "width": 0,
-        "height": 0,
-        "label": "Connected",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
-        "name": "",
-        "x": 1070,
-        "y": 300,
-        "wires": []
-    },
-    {
         "id": "0d3eadbcaaeedad8",
         "type": "switch",
         "z": "071f8a4b90537c6d",
@@ -701,22 +565,6 @@
             [
                 "a129442f0a4143e0",
                 "4869966d6f9a8036"
-            ]
-        ]
-    },
-    {
-        "id": "09a02fd8eb7ae536",
-        "type": "telegram sender",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "bot": "dc0a930d12b3acbd",
-        "haserroroutput": false,
-        "outputs": 1,
-        "x": 1355,
-        "y": 255,
-        "wires": [
-            [
-                "d582fb85641f3238"
             ]
         ]
     },
@@ -815,6 +663,333 @@
         "statusType": "auto",
         "x": 1345,
         "y": 1410,
+        "wires": []
+    },
+    {
+        "id": "d15d7d8bb2a6fbc4",
+        "type": "json",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 935,
+        "y": 660,
+        "wires": [
+            [
+                "c60bcadf5ac7b27f",
+                "39b4a5829ce34edc",
+                "a93d46b10d1b2153",
+                "a7c1a3f325089efb",
+                "54a555d4d929ad13",
+                "427708f0fbf0fa4e",
+                "3959d2152f75d4b5",
+                "40a49ba707237883",
+                "b53e1ab37122f002",
+                "417a51db5b220d33",
+                "bb20cf90421d90ae"
+            ]
+        ]
+    },
+    {
+        "id": "417a51db5b220d33",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1345,
+        "y": 885,
+        "wires": []
+    },
+    {
+        "id": "4545f110b1d8804d",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 195,
+        "wires": []
+    },
+    {
+        "id": "4c453a06918bb926",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Trade Floor Time",
+        "input": "payload.current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1365,
+        "y": 1275,
+        "wires": [
+            [
+                "598d9e5be063516d"
+            ]
+        ]
+    },
+    {
+        "id": "10d1e8d3a46c5428",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Trade Floor Date",
+        "input": "payload.current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, YYYY",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1365,
+        "y": 1320,
+        "wires": [
+            [
+                "0bbc3d5255f34ecd"
+            ]
+        ]
+    },
+    {
+        "id": "13a8b9c8c24e2833",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Computer Up Time",
+        "input": "payload.computer_uptime.uptime",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1365,
+        "y": 1365,
+        "wires": [
+            [
+                "4e520b86618891b2"
+            ]
+        ]
+    },
+    {
+        "id": "40a49ba707237883",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Pantry Time",
+        "input": "payload.current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1345,
+        "y": 750,
+        "wires": [
+            [
+                "3be9cc655fc84ced"
+            ]
+        ]
+    },
+    {
+        "id": "b53e1ab37122f002",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Pantry Date",
+        "input": "payload.current_shot_time",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "ddd, MMM Do, YYYY",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1345,
+        "y": 795,
+        "wires": [
+            [
+                "d77308d638a7ed68"
+            ]
+        ]
+    },
+    {
+        "id": "bb20cf90421d90ae",
+        "type": "moment",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "topic": "Time",
+        "input": "payload.computer_uptime",
+        "inputType": "msg",
+        "inTz": "America/New_York",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "HH:mm:ss",
+        "locale": "en-US",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "America/New_York",
+        "x": 1325,
+        "y": 840,
+        "wires": [
+            [
+                "cc11536f93d7b253"
+            ]
+        ]
+    },
+    {
+        "id": "09a02fd8eb7ae536",
+        "type": "telegram sender",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "bot": "dc0a930d12b3acbd",
+        "haserroroutput": false,
+        "outputs": 1,
+        "x": 1355,
+        "y": 255,
+        "wires": [
+            [
+                "d582fb85641f3238"
+            ]
+        ]
+    },
+    {
+        "id": "487a16fc60057f15",
+        "type": "timeout",
+        "z": "071f8a4b90537c6d",
+        "name": "Trade Floor Out Message",
+        "outtopic": "",
+        "outsafe": "Trade Floor Comm is alive",
+        "outwarning": "",
+        "outunsafe": "Trade Floor Computer stopped transmitting",
+        "warning": "0",
+        "timer": "60",
+        "repeat": true,
+        "again": false,
+        "x": 500,
+        "y": 135,
+        "wires": [
+            [
+                "278f1e2d358d64cc",
+                "43f80bf3b24dca39"
+            ]
+        ]
+    },
+    {
+        "id": "cc059a6215a718da",
+        "type": "timeout",
+        "z": "071f8a4b90537c6d",
+        "name": "Pantry Out Message",
+        "outtopic": "",
+        "outsafe": "Pantry Comm is alive",
+        "outwarning": "",
+        "outunsafe": "Pantry Computer Stopped Transmitting",
+        "warning": "0",
+        "timer": "60",
+        "repeat": true,
+        "again": false,
+        "x": 490,
+        "y": 255,
+        "wires": [
+            [
+                "b43aa44b8046add8",
+                "0d3eadbcaaeedad8"
+            ]
+        ]
+    },
+    {
+        "id": "32b0c0cea2b31e73",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Connected",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "",
+        "x": 1070,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "a129442f0a4143e0",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "label": "Connected",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            },
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "name": "",
+        "x": 1070,
+        "y": 300,
         "wires": []
     },
     {
@@ -954,31 +1129,6 @@
         "wires": []
     },
     {
-        "id": "4c453a06918bb926",
-        "type": "moment",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Trade Floor Time",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1365,
-        "y": 1275,
-        "wires": [
-            [
-                "598d9e5be063516d"
-            ]
-        ]
-    },
-    {
         "id": "0bbc3d5255f34ecd",
         "type": "ui_text",
         "z": "071f8a4b90537c6d",
@@ -996,31 +1146,6 @@
         "wires": []
     },
     {
-        "id": "10d1e8d3a46c5428",
-        "type": "moment",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Trade Floor Date",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "ddd, MMM Do, YYYY",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1365,
-        "y": 1320,
-        "wires": [
-            [
-                "0bbc3d5255f34ecd"
-            ]
-        ]
-    },
-    {
         "id": "4e520b86618891b2",
         "type": "ui_text",
         "z": "071f8a4b90537c6d",
@@ -1036,57 +1161,6 @@
         "x": 1575,
         "y": 1365,
         "wires": []
-    },
-    {
-        "id": "13a8b9c8c24e2833",
-        "type": "moment",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Computer Up Time",
-        "input": "payload.computer_uptime.uptime",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1365,
-        "y": 1365,
-        "wires": [
-            [
-                "4e520b86618891b2"
-            ]
-        ]
-    },
-    {
-        "id": "d15d7d8bb2a6fbc4",
-        "type": "json",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": true,
-        "x": 935,
-        "y": 660,
-        "wires": [
-            [
-                "c60bcadf5ac7b27f",
-                "39b4a5829ce34edc",
-                "a93d46b10d1b2153",
-                "a7c1a3f325089efb",
-                "54a555d4d929ad13",
-                "427708f0fbf0fa4e",
-                "3959d2152f75d4b5",
-                "40a49ba707237883",
-                "b53e1ab37122f002",
-                "417a51db5b220d33",
-                "bb20cf90421d90ae"
-            ]
-        ]
     },
     {
         "id": "c60bcadf5ac7b27f",
@@ -1249,56 +1323,6 @@
         ]
     },
     {
-        "id": "40a49ba707237883",
-        "type": "moment",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Pantry Time",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1345,
-        "y": 750,
-        "wires": [
-            [
-                "3be9cc655fc84ced"
-            ]
-        ]
-    },
-    {
-        "id": "b53e1ab37122f002",
-        "type": "moment",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Pantry Date",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "ddd, MMM Do, YYYY",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1345,
-        "y": 795,
-        "wires": [
-            [
-                "d77308d638a7ed68"
-            ]
-        ]
-    },
-    {
         "id": "d77308d638a7ed68",
         "type": "ui_text",
         "z": "071f8a4b90537c6d",
@@ -1339,78 +1363,69 @@
         ]
     },
     {
-        "id": "bb20cf90421d90ae",
-        "type": "moment",
+        "id": "6c85c86c71e00f91",
+        "type": "dropbox",
         "z": "071f8a4b90537c6d",
-        "name": "",
-        "topic": "Time",
-        "input": "payload.computer_uptime",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 1325,
-        "y": 840,
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "",
+        "name": "Trade Floor Camera Shot Info",
+        "x": 715,
+        "y": 1140,
         "wires": [
             [
-                "cc11536f93d7b253"
+                "ed29c4b6d9d19c6c"
             ]
         ]
     },
     {
-        "id": "417a51db5b220d33",
-        "type": "debug",
+        "id": "e27e4b0a19d19739",
+        "type": "dropbox",
         "z": "071f8a4b90537c6d",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1345,
-        "y": 885,
-        "wires": []
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "",
+        "name": "Pantry Camera Shot Info",
+        "x": 710,
+        "y": 660,
+        "wires": [
+            [
+                "d15d7d8bb2a6fbc4"
+            ]
+        ]
     },
     {
-        "id": "4545f110b1d8804d",
+        "id": "038e59dea0b633aa",
+        "type": "udp in",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "iface": "",
+        "port": "65516",
+        "ipv": "udp4",
+        "multicast": "false",
+        "group": "",
+        "datatype": "utf8",
+        "x": 400,
+        "y": 900,
+        "wires": [
+            [
+                "4b08d45ff2d7f6e1"
+            ]
+        ]
+    },
+    {
+        "id": "4b08d45ff2d7f6e1",
         "type": "debug",
         "z": "071f8a4b90537c6d",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 195,
+        "x": 670,
+        "y": 900,
         "wires": []
-    },
-    {
-        "id": "31fb8ebbf0703b88",
-        "type": "countula",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "x": 525,
-        "y": 1140,
-        "wires": [
-            [
-                "f53e9db4f0029f61"
-            ],
-            [
-                "0979e3abb46da9c9"
-            ]
-        ]
     },
     {
         "id": "f53e9db4f0029f61",
@@ -1425,8 +1440,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 1110,
+        "x": 550,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1442,8 +1457,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 710,
-        "y": 1170,
+        "x": 550,
+        "y": 1320,
         "wires": []
     },
     {
@@ -1466,9 +1481,7 @@
         "x": 125,
         "y": 1140,
         "wires": [
-            [
-                "31fb8ebbf0703b88"
-            ]
+            []
         ]
     },
     {
@@ -1518,9 +1531,7 @@
         "x": 305,
         "y": 1305,
         "wires": [
-            [
-                "31fb8ebbf0703b88"
-            ]
+            []
         ]
     },
     {
@@ -1570,9 +1581,7 @@
         "x": 305,
         "y": 1200,
         "wires": [
-            [
-                "31fb8ebbf0703b88"
-            ]
+            []
         ]
     },
     {
@@ -1622,24 +1631,7 @@
         "x": 305,
         "y": 1350,
         "wires": [
-            [
-                "31fb8ebbf0703b88"
-            ]
-        ]
-    },
-    {
-        "id": "c726e31cb4c86054",
-        "type": "dropbox",
-        "z": "77efff399d3d27cc",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "",
-        "x": 540,
-        "y": 180,
-        "wires": [
-            [
-                "4f52aa5537f6f0cc"
-            ]
+            []
         ]
     },
     {
@@ -1664,9 +1656,7 @@
         "x": 345,
         "y": 180,
         "wires": [
-            [
-                "c726e31cb4c86054"
-            ]
+            []
         ]
     },
     {
@@ -1699,52 +1689,6 @@
         ]
     },
     {
-        "id": "4f52aa5537f6f0cc",
-        "type": "base64",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "action": "",
-        "property": "payload",
-        "x": 705,
-        "y": 180,
-        "wires": [
-            [
-                "3bc2fc6c278f6e84"
-            ]
-        ]
-    },
-    {
-        "id": "3bc2fc6c278f6e84",
-        "type": "image",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "width": "320",
-        "data": "payload",
-        "dataType": "msg",
-        "thumbnail": false,
-        "active": true,
-        "pass": false,
-        "outputs": 0,
-        "x": 890,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "7e64a47f88e40b52",
-        "type": "dropbox",
-        "z": "77efff399d3d27cc",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "",
-        "x": 540,
-        "y": 495,
-        "wires": [
-            [
-                "8c22e14ff9cda576"
-            ]
-        ]
-    },
-    {
         "id": "2bca8b12040f4d8c",
         "type": "change",
         "z": "77efff399d3d27cc",
@@ -1766,9 +1710,7 @@
         "x": 345,
         "y": 495,
         "wires": [
-            [
-                "7e64a47f88e40b52"
-            ]
+            []
         ]
     },
     {
@@ -1799,92 +1741,6 @@
                 "2bca8b12040f4d8c"
             ]
         ]
-    },
-    {
-        "id": "8c22e14ff9cda576",
-        "type": "base64",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "action": "",
-        "property": "payload",
-        "x": 705,
-        "y": 495,
-        "wires": [
-            [
-                "62645abcc4187006"
-            ]
-        ]
-    },
-    {
-        "id": "62645abcc4187006",
-        "type": "jimp-image",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "data": "payload",
-        "dataType": "msg",
-        "ret": "img",
-        "parameter1": "true",
-        "parameter1Type": "bool",
-        "parameter2": "true",
-        "parameter2Type": "bool",
-        "parameter3": "",
-        "parameter3Type": "msg",
-        "parameter4": "",
-        "parameter4Type": "msg",
-        "parameter5": "",
-        "parameter5Type": "msg",
-        "parameter6": "",
-        "parameter6Type": "msg",
-        "parameter7": "",
-        "parameter7Type": "msg",
-        "parameter8": "",
-        "parameter8Type": "msg",
-        "sendProperty": "payload",
-        "sendPropertyType": "msg",
-        "parameterCount": 2,
-        "jimpFunction": "flip",
-        "selectedJimpFunction": {
-            "name": "flip",
-            "fn": "flip",
-            "description": "flip the image horizontally or vertically",
-            "parameters": [
-                {
-                    "name": "horz",
-                    "type": "bool",
-                    "required": true,
-                    "hint": "if true the image will be flipped horizontally"
-                },
-                {
-                    "name": "vert",
-                    "type": "bool",
-                    "required": true,
-                    "hint": "if true the image will be flipped vertically"
-                }
-            ]
-        },
-        "x": 850,
-        "y": 495,
-        "wires": [
-            [
-                "545bc541c1510b7b"
-            ]
-        ]
-    },
-    {
-        "id": "545bc541c1510b7b",
-        "type": "image",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "width": "320",
-        "data": "payload",
-        "dataType": "msg",
-        "thumbnail": false,
-        "active": true,
-        "pass": false,
-        "outputs": 0,
-        "x": 1015,
-        "y": 495,
-        "wires": []
     },
     {
         "id": "d2f31be4dd6e4bd8",
@@ -1955,21 +1811,6 @@
         ]
     },
     {
-        "id": "67cad9eb8bdb7d20",
-        "type": "dropbox",
-        "z": "77efff399d3d27cc",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "",
-        "x": 540,
-        "y": 855,
-        "wires": [
-            [
-                "212a733f4b68dfe1"
-            ]
-        ]
-    },
-    {
         "id": "07b35feb0bef42f2",
         "type": "change",
         "z": "77efff399d3d27cc",
@@ -1991,9 +1832,7 @@
         "x": 345,
         "y": 855,
         "wires": [
-            [
-                "67cad9eb8bdb7d20"
-            ]
+            []
         ]
     },
     {
@@ -2026,22 +1865,7 @@
         ]
     },
     {
-        "id": "212a733f4b68dfe1",
-        "type": "base64",
-        "z": "77efff399d3d27cc",
-        "name": "",
-        "action": "",
-        "property": "payload",
-        "x": 705,
-        "y": 855,
-        "wires": [
-            [
-                "35e1f78695ccbcd6"
-            ]
-        ]
-    },
-    {
-        "id": "35e1f78695ccbcd6",
+        "id": "0f2d87d637b8817e",
         "type": "image",
         "z": "77efff399d3d27cc",
         "name": "",
@@ -2052,58 +1876,141 @@
         "active": true,
         "pass": false,
         "outputs": 0,
-        "x": 890,
-        "y": 855,
+        "x": 1580,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "4d8ede1418ec60ed",
-        "type": "open-web",
+        "id": "a9dcabee4dbd311e",
+        "type": "image",
         "z": "77efff399d3d27cc",
         "name": "",
-        "browser": "chrome",
-        "weburl": "https://www.google.com/",
-        "width": 1024,
-        "height": 768,
-        "webtitle": "Google",
-        "timeout": 3000,
-        "maximized": true,
-        "server": "3b327eeb736a7eca",
-        "x": 1390,
-        "y": 1185,
+        "width": "320",
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 1580,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "d4d56fb74ad673c2",
+        "type": "image",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "width": "320",
+        "data": "payload",
+        "dataType": "msg",
+        "thumbnail": false,
+        "active": true,
+        "pass": false,
+        "outputs": 0,
+        "x": 1580,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "aa7f7f3344c8d4f3",
+        "type": "base64",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 1260,
+        "y": 540,
         "wires": [
             [
-                "1adcc5d49a19e3c8"
+                "e63015bc6abf43b8"
             ]
         ]
     },
     {
-        "id": "1adcc5d49a19e3c8",
-        "type": "debug",
+        "id": "01c94332afbc30ba",
+        "type": "base64",
         "z": "77efff399d3d27cc",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1580,
-        "y": 1185,
-        "wires": []
+        "action": "",
+        "property": "payload",
+        "x": 1370,
+        "y": 860,
+        "wires": [
+            [
+                "a9dcabee4dbd311e"
+            ]
+        ]
     },
     {
-        "id": "eb11f0a9f504bea4",
-        "type": "inject",
+        "id": "d7e8f65f409d25eb",
+        "type": "base64",
         "z": "77efff399d3d27cc",
         "name": "",
+        "action": "",
+        "property": "payload",
+        "x": 1395,
+        "y": 220,
+        "wires": [
+            [
+                "d4d56fb74ad673c2"
+            ]
+        ]
+    },
+    {
+        "id": "5696acbdfd72d614",
+        "type": "dropbox",
+        "z": "77efff399d3d27cc",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "",
+        "name": "",
+        "x": 1100,
+        "y": 540,
+        "wires": [
+            [
+                "aa7f7f3344c8d4f3"
+            ]
+        ]
+    },
+    {
+        "id": "cfc32cb2fbab7cae",
+        "type": "dropbox",
+        "z": "77efff399d3d27cc",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "",
+        "name": "",
+        "x": 1205,
+        "y": 860,
+        "wires": [
+            [
+                "01c94332afbc30ba"
+            ]
+        ]
+    },
+    {
+        "id": "904750d45427c5d8",
+        "type": "dropbox",
+        "z": "77efff399d3d27cc",
+        "dropbox": "648bd60a845b1eb0",
+        "filename": "",
+        "name": "",
+        "x": 1230,
+        "y": 220,
+        "wires": [
+            [
+                "d7e8f65f409d25eb"
+            ]
+        ]
+    },
+    {
+        "id": "6cbd4533f06fddec",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "Pantry",
         "props": [
             {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
+                "p": "filename",
+                "v": "/point72_dragonframe_2/P72b_003.dgn/P72b_003_Take_01/P72b_003_01_feed/feed_003_01_X1_0264.jpg",
                 "vt": "str"
             }
         ],
@@ -2112,13 +2019,116 @@
         "once": false,
         "onceDelay": 0.1,
         "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1200,
-        "y": 1185,
+        "x": 1070,
+        "y": 220,
         "wires": [
             [
-                "4d8ede1418ec60ed"
+                "904750d45427c5d8"
+            ]
+        ]
+    },
+    {
+        "id": "f5ecbb08ca35e69d",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "Trade Floor",
+        "props": [
+            {
+                "p": "filename",
+                "v": "/point72_dragonframe/P72_004.dgn/P72_004_Take_01/P72_004_01_feed/feed_004_01_X1_0264.jpg",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 930,
+        "y": 540,
+        "wires": [
+            [
+                "5696acbdfd72d614"
+            ]
+        ]
+    },
+    {
+        "id": "226a36614353774b",
+        "type": "inject",
+        "z": "77efff399d3d27cc",
+        "name": "Test",
+        "props": [
+            {
+                "p": "filename",
+                "v": "/Test_002.dgn/Test_002_Take_01/Test_002_01_feed/feed_002_01_X1_0782.jpg",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 1030,
+        "y": 860,
+        "wires": [
+            [
+                "cfc32cb2fbab7cae"
+            ]
+        ]
+    },
+    {
+        "id": "e63015bc6abf43b8",
+        "type": "jimp-image",
+        "z": "77efff399d3d27cc",
+        "name": "",
+        "data": "payload",
+        "dataType": "msg",
+        "ret": "img",
+        "parameter1": "true",
+        "parameter1Type": "bool",
+        "parameter2": "true",
+        "parameter2Type": "bool",
+        "parameter3": "",
+        "parameter3Type": "msg",
+        "parameter4": "",
+        "parameter4Type": "msg",
+        "parameter5": "",
+        "parameter5Type": "msg",
+        "parameter6": "",
+        "parameter6Type": "msg",
+        "parameter7": "",
+        "parameter7Type": "msg",
+        "parameter8": "",
+        "parameter8Type": "msg",
+        "sendProperty": "payload",
+        "sendPropertyType": "msg",
+        "parameterCount": 2,
+        "jimpFunction": "flip",
+        "selectedJimpFunction": {
+            "name": "flip",
+            "fn": "flip",
+            "description": "flip the image horizontally or vertically",
+            "parameters": [
+                {
+                    "name": "horz",
+                    "type": "bool",
+                    "required": true,
+                    "hint": "if true the image will be flipped horizontally"
+                },
+                {
+                    "name": "vert",
+                    "type": "bool",
+                    "required": true,
+                    "hint": "if true the image will be flipped vertically"
+                }
+            ]
+        },
+        "x": 1410,
+        "y": 540,
+        "wires": [
+            [
+                "0f2d87d637b8817e"
             ]
         ]
     }
