@@ -16,6 +16,14 @@
         "env": []
     },
     {
+        "id": "36d9a72495f275f8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
         "id": "dc0a930d12b3acbd",
         "type": "telegram bot",
         "botname": "@patofoto_bot",
@@ -191,11 +199,6 @@
         "id": "648bd60a845b1eb0",
         "type": "dropbox-config",
         "name": "Dropbox"
-    },
-    {
-        "id": "3b327eeb736a7eca",
-        "type": "selenium-server",
-        "remoteurl": "http://localhost:4444/wd/hub"
     },
     {
         "id": "9ccffe72618812d2",
@@ -1393,41 +1396,6 @@
         ]
     },
     {
-        "id": "038e59dea0b633aa",
-        "type": "udp in",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "iface": "",
-        "port": "65516",
-        "ipv": "udp4",
-        "multicast": "false",
-        "group": "",
-        "datatype": "utf8",
-        "x": 400,
-        "y": 900,
-        "wires": [
-            [
-                "4b08d45ff2d7f6e1"
-            ]
-        ]
-    },
-    {
-        "id": "4b08d45ff2d7f6e1",
-        "type": "debug",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 670,
-        "y": 900,
-        "wires": []
-    },
-    {
         "id": "f53e9db4f0029f61",
         "type": "debug",
         "z": "77efff399d3d27cc",
@@ -2131,5 +2099,185 @@
                 "0f2d87d637b8817e"
             ]
         ]
+    },
+    {
+        "id": "67c332933ddfbde5",
+        "type": "http request",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://www.camerarescue.org/repaircenters",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 570,
+        "y": 420,
+        "wires": [
+            [
+                "f5062a3cf85ecb6d",
+                "be1302c5d7870fb2"
+            ]
+        ]
+    },
+    {
+        "id": "16645baa53d658ac",
+        "type": "inject",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 360,
+        "y": 420,
+        "wires": [
+            [
+                "67c332933ddfbde5"
+            ]
+        ]
+    },
+    {
+        "id": "5101c3ab44cf546a",
+        "type": "debug",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "f5062a3cf85ecb6d",
+        "type": "html",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "table > tbody",
+        "ret": "html",
+        "as": "single",
+        "x": 850,
+        "y": 420,
+        "wires": [
+            [
+                "5101c3ab44cf546a"
+            ]
+        ]
+    },
+    {
+        "id": "6f1164736112f7dc",
+        "type": "unfluff",
+        "z": "36d9a72495f275f8",
+        "name": "unfluff",
+        "url": "https://www.camerarescue.org/repaircenters",
+        "x": 1050,
+        "y": 720,
+        "wires": [
+            [
+                "3057a5fee329a068"
+            ]
+        ]
+    },
+    {
+        "id": "3057a5fee329a068",
+        "type": "debug",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1230,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "dea91e22a2845294",
+        "type": "inject",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 880,
+        "y": 720,
+        "wires": [
+            [
+                "6f1164736112f7dc"
+            ]
+        ]
+    },
+    {
+        "id": "be1302c5d7870fb2",
+        "type": "html",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "property": "payload",
+        "outproperty": "payload",
+        "tag": "table > thead",
+        "ret": "text",
+        "as": "single",
+        "x": 850,
+        "y": 360,
+        "wires": [
+            [
+                "22093d3c22c15a21"
+            ]
+        ]
+    },
+    {
+        "id": "22093d3c22c15a21",
+        "type": "debug",
+        "z": "36d9a72495f275f8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 360,
+        "wires": []
     }
 ]
