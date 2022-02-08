@@ -61,7 +61,7 @@
             },
             "darkTheme": {
                 "default": "#097479",
-                "baseColor": "#e32400",
+                "baseColor": "#b51a00",
                 "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
                 "edited": true,
                 "reset": false
@@ -75,11 +75,11 @@
             "themeState": {
                 "base-color": {
                     "default": "#097479",
-                    "value": "#e32400",
+                    "value": "#b51a00",
                     "edited": true
                 },
                 "page-titlebar-backgroundColor": {
-                    "value": "#e32400",
+                    "value": "#b51a00",
                     "edited": false
                 },
                 "page-backgroundColor": {
@@ -91,7 +91,7 @@
                     "edited": false
                 },
                 "group-textColor": {
-                    "value": "#ff5130",
+                    "value": "#ff2702",
                     "edited": false
                 },
                 "group-borderColor": {
@@ -107,7 +107,7 @@
                     "edited": false
                 },
                 "widget-backgroundColor": {
-                    "value": "#e32400",
+                    "value": "#b51a00",
                     "edited": false
                 },
                 "widget-borderColor": {
@@ -160,7 +160,7 @@
         "tab": "e1b2acf529c37dbe",
         "order": 2,
         "disp": true,
-        "width": "6",
+        "width": "7",
         "collapse": false,
         "className": ""
     },
@@ -207,7 +207,7 @@
         "tab": "e1b2acf529c37dbe",
         "order": 3,
         "disp": true,
-        "width": "6",
+        "width": "7",
         "collapse": false,
         "className": ""
     },
@@ -218,6 +218,16 @@
         "name": "spacer",
         "group": "68b5dc8607ac2516",
         "order": 5,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "06d91d9f1cd56a34",
+        "type": "ui_spacer",
+        "z": "071f8a4b90537c6d",
+        "name": "spacer",
+        "group": "a60279a49b45287e",
+        "order": 13,
         "width": 1,
         "height": 1
     },
@@ -472,7 +482,7 @@
         "y": 105,
         "wires": [
             [
-                "32b0c0cea2b31e73"
+                "c797cd894757b5c2"
             ]
         ]
     },
@@ -499,8 +509,8 @@
         "y": 150,
         "wires": [
             [
-                "32b0c0cea2b31e73",
-                "861da33f12713922"
+                "861da33f12713922",
+                "c797cd894757b5c2"
             ]
         ]
     },
@@ -560,7 +570,7 @@
         "y": 285,
         "wires": [
             [
-                "a129442f0a4143e0"
+                "54567435891e7047"
             ]
         ]
     },
@@ -587,8 +597,8 @@
         "y": 330,
         "wires": [
             [
-                "a129442f0a4143e0",
-                "4869966d6f9a8036"
+                "4869966d6f9a8036",
+                "54567435891e7047"
             ]
         ]
     },
@@ -959,64 +969,6 @@
                 "0d3eadbcaaeedad8"
             ]
         ]
-    },
-    {
-        "id": "32b0c0cea2b31e73",
-        "type": "ui_led",
-        "z": "071f8a4b90537c6d",
-        "group": "a60279a49b45287e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "Connected",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": true,
-        "name": "",
-        "x": 1070,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "a129442f0a4143e0",
-        "type": "ui_led",
-        "z": "071f8a4b90537c6d",
-        "group": "4d127de44dfa1ea4",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "label": "Connected",
-        "labelPlacement": "left",
-        "labelAlignment": "left",
-        "colorForValue": [
-            {
-                "color": "#008000",
-                "value": "true",
-                "valueType": "bool"
-            },
-            {
-                "color": "#ff0000",
-                "value": "false",
-                "valueType": "bool"
-            }
-        ],
-        "allowColorForValueInMessage": true,
-        "name": "",
-        "x": 1070,
-        "y": 300,
-        "wires": []
     },
     {
         "id": "eee8603e784ae913",
@@ -1497,7 +1449,8 @@
                 "0750895236f57990",
                 "5ae60ca493919129",
                 "900ade67e9492507",
-                "1840600fd072f08b"
+                "1840600fd072f08b",
+                "109fe2a2e708feeb"
             ]
         ]
     },
@@ -1787,7 +1740,7 @@
         "data": "payload.last_Shot_Thumb",
         "dataType": "msg",
         "thumbnail": false,
-        "active": true,
+        "active": false,
         "pass": false,
         "outputs": 0,
         "x": 1840,
@@ -1804,11 +1757,15 @@
         "dataType": "msg",
         "thumbnail": false,
         "active": true,
-        "pass": false,
-        "outputs": 0,
-        "x": 1840,
+        "pass": true,
+        "outputs": 1,
+        "x": 1740,
         "y": 660,
-        "wires": []
+        "wires": [
+            [
+                "b7bf42b660edb8ac"
+            ]
+        ]
     },
     {
         "id": "1c0d10c342d3f183",
@@ -1817,7 +1774,7 @@
         "name": "",
         "data": "payload.last_Shot_Thumb",
         "dataType": "msg",
-        "ret": "img",
+        "ret": "b64",
         "parameter1": "true",
         "parameter1Type": "bool",
         "parameter2": "true",
@@ -1861,7 +1818,8 @@
         "y": 1140,
         "wires": [
             [
-                "4d3cb1e37969f202"
+                "4d3cb1e37969f202",
+                "55ba90403eae5867"
             ]
         ]
     },
@@ -1879,6 +1837,203 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "b7bf42b660edb8ac",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.last_Shot_Thumb",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1940,
+        "y": 660,
+        "wires": [
+            [
+                "66b1af55e358076f",
+                "3a1bff0b.55d3c"
+            ]
+        ]
+    },
+    {
+        "id": "66b1af55e358076f",
+        "type": "debug",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2130,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "3a1bff0b.55d3c",
+        "type": "ui_template",
+        "z": "071f8a4b90537c6d",
+        "group": "a60279a49b45287e",
+        "name": "",
+        "order": 14,
+        "width": "0",
+        "height": "0",
+        "format": "<img style='display:block; width:320px;height:213px;' id='base64image'\n       src='{{msg.payload}}' />",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "style='width:100%;'",
+        "x": 2140,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "55ba90403eae5867",
+        "type": "ui_template",
+        "z": "071f8a4b90537c6d",
+        "group": "4d127de44dfa1ea4",
+        "name": "",
+        "order": 13,
+        "width": "0",
+        "height": "0",
+        "format": "<img style='display:block; width:320px;height:213px;' id='base64image'\n       src='{{msg.payload}}' />",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "style='width:100%;'",
+        "x": 1820,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c98f555b17d0c693",
+        "type": "ui_template",
+        "z": "071f8a4b90537c6d",
+        "d": true,
+        "group": "68b5dc8607ac2516",
+        "name": "",
+        "order": 14,
+        "width": "0",
+        "height": "0",
+        "format": "<img style='display:block; width:320px;height:213px;' id='base64image'\n       src='{{msg.payload}}' />",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "style='width:100%;'",
+        "x": 1920,
+        "y": 1600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "109fe2a2e708feeb",
+        "type": "change",
+        "z": "071f8a4b90537c6d",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.last_Shot_Thumb",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1700,
+        "y": 1600,
+        "wires": [
+            [
+                "c98f555b17d0c693"
+            ]
+        ]
+    },
+    {
+        "id": "c797cd894757b5c2",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "order": 5,
+        "group": "4d127de44dfa1ea4",
+        "width": 0,
+        "height": 0,
+        "label": "Connection",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "54567435891e7047",
+        "type": "ui_led",
+        "z": "071f8a4b90537c6d",
+        "order": 5,
+        "group": "a60279a49b45287e",
+        "width": 0,
+        "height": 0,
+        "label": "Connection",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "#008000",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": false,
+        "name": "",
+        "x": 1090,
+        "y": 300,
+        "wires": []
     },
     {
         "id": "f53e9db4f0029f61",
