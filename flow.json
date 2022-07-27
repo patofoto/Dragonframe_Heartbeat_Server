@@ -66,35 +66,6 @@
         ]
     },
     {
-        "id": "7e1726d72b9faa8b",
-        "type": "subflow",
-        "name": "Subflow 3",
-        "info": "",
-        "in": [
-            {
-                "x": 60,
-                "y": 260,
-                "wires": [
-                    {
-                        "id": "3777cb54e241a511"
-                    }
-                ]
-            }
-        ],
-        "out": [
-            {
-                "x": 320,
-                "y": 260,
-                "wires": [
-                    {
-                        "id": "3777cb54e241a511",
-                        "port": 0
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "id": "dc0a930d12b3acbd",
         "type": "telegram bot",
         "botname": "@patofoto_bot",
@@ -270,27 +241,17 @@
         "name": "Dropbox"
     },
     {
-        "id": "68b5dc8607ac2516",
-        "type": "ui_group",
-        "name": "Test Camera",
-        "tab": "e1b2acf529c37dbe",
-        "order": 3,
-        "disp": true,
-        "width": "7",
-        "collapse": false
-    },
-    {
-        "id": "239dee7d83b80eb9",
+        "id": "636473dcc161b3a3",
         "type": "ui_spacer",
         "z": "071f8a4b90537c6d",
         "name": "spacer",
-        "group": "68b5dc8607ac2516",
-        "order": 5,
+        "group": "4d127de44dfa1ea4",
+        "order": 13,
         "width": 1,
         "height": 1
     },
     {
-        "id": "06d91d9f1cd56a34",
+        "id": "8f5e228a4dac886a",
         "type": "ui_spacer",
         "z": "071f8a4b90537c6d",
         "name": "spacer",
@@ -884,284 +845,6 @@
                 "13a8b9c8c24e2833"
             ]
         ]
-    },
-    {
-        "id": "3777cb54e241a511",
-        "type": "json",
-        "z": "7e1726d72b9faa8b",
-        "name": "",
-        "property": "payload",
-        "action": "",
-        "pretty": true,
-        "x": 195,
-        "y": 260,
-        "wires": [
-            [
-                "a12c5cda6a4b1810",
-                "fc15674b375a2760",
-                "13be44b15296b00f",
-                "51b781798c01948e",
-                "5276d1386b8fb474",
-                "b0317605659c47e7",
-                "f9c980c213c5b293",
-                "9c05269405342413",
-                "0750895236f57990",
-                "5ae60ca493919129",
-                "900ade67e9492507"
-            ]
-        ]
-    },
-    {
-        "id": "9c05269405342413",
-        "type": "debug",
-        "z": "7e1726d72b9faa8b",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 610,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "0750895236f57990",
-        "type": "moment",
-        "z": "7e1726d72b9faa8b",
-        "name": "",
-        "topic": "Trade Floor Time",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 625,
-        "y": 395,
-        "wires": [
-            [
-                "7c74eb68317a8c91"
-            ]
-        ]
-    },
-    {
-        "id": "5ae60ca493919129",
-        "type": "moment",
-        "z": "7e1726d72b9faa8b",
-        "name": "",
-        "topic": "Trade Floor Date",
-        "input": "payload.current_shot_time",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "ddd, MMM Do, YYYY",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 625,
-        "y": 440,
-        "wires": [
-            [
-                "53b50b07f2cb820e"
-            ]
-        ]
-    },
-    {
-        "id": "900ade67e9492507",
-        "type": "moment",
-        "z": "7e1726d72b9faa8b",
-        "name": "",
-        "topic": "Computer Up Time",
-        "input": "payload.computer_uptime.uptime",
-        "inputType": "msg",
-        "inTz": "America/New_York",
-        "adjAmount": 0,
-        "adjType": "days",
-        "adjDir": "add",
-        "format": "HH:mm:ss",
-        "locale": "en-US",
-        "output": "payload",
-        "outputType": "msg",
-        "outTz": "America/New_York",
-        "x": 625,
-        "y": 485,
-        "wires": [
-            [
-                "3c94cecc3599643c"
-            ]
-        ]
-    },
-    {
-        "id": "a12c5cda6a4b1810",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "Camera Name",
-        "label": "Camera Name",
-        "format": "{{msg.payload.camera_name}}",
-        "layout": "row-spread",
-        "x": 615,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "fc15674b375a2760",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 6,
-        "width": 0,
-        "height": 0,
-        "name": "Interval",
-        "label": "Interval",
-        "format": "{{msg.payload.interval_min}} min",
-        "layout": "row-spread",
-        "x": 595,
-        "y": 125,
-        "wires": []
-    },
-    {
-        "id": "13be44b15296b00f",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 7,
-        "width": 0,
-        "height": 0,
-        "name": "Time Start",
-        "label": "Time Start",
-        "format": "{{msg.payload.time_start_24}}:00",
-        "layout": "row-spread",
-        "x": 605,
-        "y": 170,
-        "wires": []
-    },
-    {
-        "id": "51b781798c01948e",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 8,
-        "width": 0,
-        "height": 0,
-        "name": "Time End",
-        "label": "Time End",
-        "format": "{{msg.payload.time_end_24}}:00",
-        "layout": "row-spread",
-        "x": 595,
-        "y": 215,
-        "wires": []
-    },
-    {
-        "id": "5276d1386b8fb474",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 9,
-        "width": 0,
-        "height": 0,
-        "name": "Total Current Frames",
-        "label": "Total Current Frames Shot",
-        "format": "{{msg.payload.current_total_frames}}",
-        "layout": "row-spread",
-        "x": 635,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "b0317605659c47e7",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 10,
-        "width": 0,
-        "height": 0,
-        "name": "Current Daily Frame",
-        "label": "Current Daily Frame",
-        "format": "{{msg.payload.current_daily_frame}}",
-        "layout": "row-spread",
-        "x": 635,
-        "y": 305,
-        "wires": []
-    },
-    {
-        "id": "f9c980c213c5b293",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 11,
-        "width": 0,
-        "height": 0,
-        "name": "Current Shot Size",
-        "label": "Current Shot Size",
-        "format": "{{msg.payload.current_shot_size_Gb}} Gb",
-        "layout": "row-spread",
-        "x": 625,
-        "y": 350,
-        "wires": []
-    },
-    {
-        "id": "7c74eb68317a8c91",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Last Shot Time",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 825,
-        "y": 395,
-        "wires": []
-    },
-    {
-        "id": "53b50b07f2cb820e",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "Last Shot Date",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 825,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "3c94cecc3599643c",
-        "type": "ui_text",
-        "z": "7e1726d72b9faa8b",
-        "group": "68b5dc8607ac2516",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "name": "Computer Up Time",
-        "label": "Computer Up Time",
-        "format": "{{msg.payload}} hrs",
-        "layout": "row-spread",
-        "x": 835,
-        "y": 485,
-        "wires": []
     },
     {
         "id": "9ccffe72618812d2",
@@ -1821,7 +1504,7 @@
         "type": "ui_template",
         "z": "071f8a4b90537c6d",
         "group": "a60279a49b45287e",
-        "name": "",
+        "name": "Thumbnail",
         "order": 14,
         "width": "0",
         "height": "0",
@@ -1830,8 +1513,9 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 2100,
-        "y": 440,
+        "className": "",
+        "x": 2110,
+        "y": 460,
         "wires": [
             []
         ]
@@ -1841,8 +1525,8 @@
         "type": "ui_template",
         "z": "071f8a4b90537c6d",
         "group": "4d127de44dfa1ea4",
-        "name": "",
-        "order": 13,
+        "name": "Thumbnail",
+        "order": 14,
         "width": "0",
         "height": "0",
         "format": "<img style='display:block; width:320px;height:213px;' id='base64image'\n       src='{{msg.payload}}' />",
@@ -1850,7 +1534,8 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "x": 1680,
+        "className": "",
+        "x": 1690,
         "y": 1020,
         "wires": [
             []
@@ -1862,8 +1547,8 @@
         "z": "071f8a4b90537c6d",
         "group": "4d127de44dfa1ea4",
         "order": 5,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "label": "Connection",
         "labelPlacement": "left",
         "labelAlignment": "left",
@@ -1891,8 +1576,8 @@
         "z": "071f8a4b90537c6d",
         "group": "a60279a49b45287e",
         "order": 5,
-        "width": 0,
-        "height": 0,
+        "width": "0",
+        "height": "0",
         "label": "Connection",
         "labelPlacement": "left",
         "labelAlignment": "left",
