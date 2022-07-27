@@ -232,8 +232,7 @@
         "order": 2,
         "disp": true,
         "width": "7",
-        "collapse": false,
-        "className": ""
+        "collapse": false
     },
     {
         "id": "4d127de44dfa1ea4",
@@ -243,8 +242,7 @@
         "order": 1,
         "disp": true,
         "width": "7",
-        "collapse": false,
-        "className": ""
+        "collapse": false
     },
     {
         "id": "d17fd3106744b6d1",
@@ -279,8 +277,7 @@
         "order": 3,
         "disp": true,
         "width": "7",
-        "collapse": false,
-        "className": ""
+        "collapse": false
     },
     {
         "id": "239dee7d83b80eb9",
@@ -432,7 +429,6 @@
         "label": "Camera Name",
         "format": "{{msg.payload.camera_name}}",
         "layout": "row-spread",
-        "className": "",
         "x": 615,
         "y": 75,
         "wires": [],
@@ -452,7 +448,6 @@
         "label": "Interval",
         "format": "{{msg.payload.interval_min}} min",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 120,
         "wires": [],
@@ -472,7 +467,6 @@
         "label": "Time Start",
         "format": "{{msg.payload.time_start_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 605,
         "y": 165,
         "wires": [],
@@ -492,7 +486,6 @@
         "label": "Time End",
         "format": "{{msg.payload.time_end_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 210,
         "wires": [],
@@ -512,7 +505,6 @@
         "label": "Total Current Frames Shot",
         "format": "{{msg.payload.current_total_frames}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 255,
         "wires": [],
@@ -532,7 +524,6 @@
         "label": "Current Daily Frame",
         "format": "{{msg.payload.current_daily_frame}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 300,
         "wires": [],
@@ -552,7 +543,6 @@
         "label": "Current Shot Size",
         "format": "{{msg.payload.current_shot_size_Gb}} Gb",
         "layout": "row-spread",
-        "className": "",
         "x": 625,
         "y": 345,
         "wires": [],
@@ -572,7 +562,6 @@
         "label": "Last Shot Time",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 780,
         "y": 390,
         "wires": [],
@@ -592,7 +581,6 @@
         "label": "Last Shot Date",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 780,
         "y": 435,
         "wires": [],
@@ -612,7 +600,6 @@
         "label": "Computer Up Time",
         "format": "{{msg.payload}} hrs",
         "layout": "row-spread",
-        "className": "",
         "x": 760,
         "y": 480,
         "wires": [],
@@ -724,7 +711,6 @@
         "label": "Camera Name",
         "format": "{{msg.payload.camera_name}}",
         "layout": "row-spread",
-        "className": "",
         "x": 615,
         "y": 80,
         "wires": []
@@ -741,7 +727,6 @@
         "label": "Interval",
         "format": "{{msg.payload.interval_min}} min",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 125,
         "wires": []
@@ -758,7 +743,6 @@
         "label": "Time Start",
         "format": "{{msg.payload.time_start_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 605,
         "y": 170,
         "wires": []
@@ -775,7 +759,6 @@
         "label": "Time End",
         "format": "{{msg.payload.time_end_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 215,
         "wires": []
@@ -792,7 +775,6 @@
         "label": "Total Current Frames Shot",
         "format": "{{msg.payload.current_total_frames}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 260,
         "wires": []
@@ -809,7 +791,6 @@
         "label": "Current Daily Frame",
         "format": "{{msg.payload.current_daily_frame}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 305,
         "wires": []
@@ -826,7 +807,6 @@
         "label": "Current Shot Size",
         "format": "{{msg.payload.current_shot_size_Gb}} Gb",
         "layout": "row-spread",
-        "className": "",
         "x": 625,
         "y": 350,
         "wires": []
@@ -843,7 +823,6 @@
         "label": "Last Shot Time",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 825,
         "y": 395,
         "wires": []
@@ -860,7 +839,6 @@
         "label": "Last Shot Date",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 825,
         "y": 440,
         "wires": []
@@ -877,7 +855,6 @@
         "label": "Computer Up Time",
         "format": "{{msg.payload}} hrs",
         "layout": "row-spread",
-        "className": "",
         "x": 835,
         "y": 485,
         "wires": []
@@ -1038,7 +1015,6 @@
         "label": "Camera Name",
         "format": "{{msg.payload.camera_name}}",
         "layout": "row-spread",
-        "className": "",
         "x": 615,
         "y": 80,
         "wires": []
@@ -1055,7 +1031,6 @@
         "label": "Interval",
         "format": "{{msg.payload.interval_min}} min",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 125,
         "wires": []
@@ -1072,7 +1047,6 @@
         "label": "Time Start",
         "format": "{{msg.payload.time_start_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 605,
         "y": 170,
         "wires": []
@@ -1089,7 +1063,6 @@
         "label": "Time End",
         "format": "{{msg.payload.time_end_24}}:00",
         "layout": "row-spread",
-        "className": "",
         "x": 595,
         "y": 215,
         "wires": []
@@ -1106,7 +1079,6 @@
         "label": "Total Current Frames Shot",
         "format": "{{msg.payload.current_total_frames}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 260,
         "wires": []
@@ -1123,7 +1095,6 @@
         "label": "Current Daily Frame",
         "format": "{{msg.payload.current_daily_frame}}",
         "layout": "row-spread",
-        "className": "",
         "x": 635,
         "y": 305,
         "wires": []
@@ -1140,7 +1111,6 @@
         "label": "Current Shot Size",
         "format": "{{msg.payload.current_shot_size_Gb}} Gb",
         "layout": "row-spread",
-        "className": "",
         "x": 625,
         "y": 350,
         "wires": []
@@ -1157,7 +1127,6 @@
         "label": "Last Shot Time",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 825,
         "y": 395,
         "wires": []
@@ -1174,7 +1143,6 @@
         "label": "Last Shot Date",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
-        "className": "",
         "x": 825,
         "y": 440,
         "wires": []
@@ -1191,7 +1159,6 @@
         "label": "Computer Up Time",
         "format": "{{msg.payload}} hrs",
         "layout": "row-spread",
-        "className": "",
         "x": 835,
         "y": 485,
         "wires": []
@@ -1200,14 +1167,14 @@
         "id": "9ccffe72618812d2",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "Pantry Camera Port 65519",
+        "name": "Office Camera B Port 65519",
         "iface": "",
         "port": "65519",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 170,
+        "x": 180,
         "y": 255,
         "wires": [
             [
@@ -1220,14 +1187,14 @@
         "id": "6f63c6e4f8586e97",
         "type": "udp in",
         "z": "071f8a4b90537c6d",
-        "name": "Trade Floor Camera Port 65515",
+        "name": "Office Camera A Port 65515",
         "iface": "",
         "port": "65515",
         "ipv": "udp4",
         "multicast": "false",
         "group": "",
         "datatype": "utf8",
-        "x": 190,
+        "x": 180,
         "y": 165,
         "wires": [
             [
@@ -1263,7 +1230,7 @@
                 "t": "set",
                 "p": "filename",
                 "pt": "msg",
-                "to": "Point72_Camera_Settings/Info_Last Shot_Trade_Floor_Camera.json",
+                "to": "Office_Build_Camera_Settings/Info_Last Shot_Office_Camera_B_Camera.json",
                 "tot": "str"
             }
         ],
@@ -1374,7 +1341,7 @@
                 "t": "set",
                 "p": "filename",
                 "pt": "msg",
-                "to": "Point72_Camera_Settings/Info_Last Shot_Pantry_Camera.json",
+                "to": "Office_Build_Camera_Settings/Info_Last Shot_Office_Camera_A_Camera.json",
                 "tot": "str"
             }
         ],
@@ -1657,11 +1624,11 @@
         "id": "487a16fc60057f15",
         "type": "timeout",
         "z": "071f8a4b90537c6d",
-        "name": "Trade Floor Out Message",
+        "name": "Camera A Out Message",
         "outtopic": "",
-        "outsafe": "Trade Floor Comm is alive",
+        "outsafe": "Camera A Comm is alive",
         "outwarning": "",
-        "outunsafe": "Trade Floor Computer stopped transmitting",
+        "outunsafe": "Camera A Computer stopped transmitting",
         "warning": "0",
         "timer": "60",
         "repeat": true,
@@ -1679,16 +1646,16 @@
         "id": "cc059a6215a718da",
         "type": "timeout",
         "z": "071f8a4b90537c6d",
-        "name": "Pantry Out Message",
+        "name": "Camera B Out Message",
         "outtopic": "",
-        "outsafe": "Pantry Comm is alive",
+        "outsafe": "Camera B Comm is alive",
         "outwarning": "",
-        "outunsafe": "Pantry Computer Stopped Transmitting",
+        "outunsafe": "Camera B Computer Stopped Transmitting",
         "warning": "0",
         "timer": "60",
         "repeat": true,
         "again": false,
-        "x": 490,
+        "x": 500,
         "y": 255,
         "wires": [
             [
@@ -1703,8 +1670,8 @@
         "z": "071f8a4b90537c6d",
         "dropbox": "648bd60a845b1eb0",
         "filename": "",
-        "name": "Trade Floor Camera Shot Info",
-        "x": 715,
+        "name": "Office  Camera B Shot Info",
+        "x": 705,
         "y": 1080,
         "wires": [
             [
@@ -1718,8 +1685,8 @@
         "z": "071f8a4b90537c6d",
         "dropbox": "648bd60a845b1eb0",
         "filename": "",
-        "name": "Pantry Camera Shot Info",
-        "x": 690,
+        "name": "Office Camera A Shot Info",
+        "x": 700,
         "y": 520,
         "wires": [
             [
@@ -1860,28 +1827,15 @@
         "parameter8Type": "msg",
         "sendProperty": "payload",
         "sendPropertyType": "msg",
-        "parameterCount": 2,
-        "jimpFunction": "flip",
+        "parameterCount": 0,
+        "jimpFunction": "none",
         "selectedJimpFunction": {
-            "name": "flip",
-            "fn": "flip",
-            "description": "flip the image horizontally or vertically",
-            "parameters": [
-                {
-                    "name": "horz",
-                    "type": "bool",
-                    "required": true,
-                    "hint": "if true the image will be flipped horizontally"
-                },
-                {
-                    "name": "vert",
-                    "type": "bool",
-                    "required": true,
-                    "hint": "if true the image will be flipped vertically"
-                }
-            ]
+            "name": "none",
+            "fn": "none",
+            "description": "Just loads the image.",
+            "parameters": []
         },
-        "x": 1450,
+        "x": 1390,
         "y": 1080,
         "wires": [
             [
@@ -1963,7 +1917,6 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "className": "style='width:100%;'",
         "x": 2100,
         "y": 440,
         "wires": [
@@ -1984,7 +1937,6 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "className": "style='width:100%;'",
         "x": 1680,
         "y": 1020,
         "wires": [
@@ -2006,7 +1958,6 @@
         "fwdInMessages": true,
         "resendOnRefresh": false,
         "templateScope": "local",
-        "className": "style='width:100%;'",
         "x": 1440,
         "y": 1900,
         "wires": [
@@ -2044,8 +1995,8 @@
         "id": "c797cd894757b5c2",
         "type": "ui_led",
         "z": "071f8a4b90537c6d",
-        "order": 5,
         "group": "4d127de44dfa1ea4",
+        "order": 5,
         "width": 0,
         "height": 0,
         "label": "Connection",
@@ -2064,8 +2015,6 @@
             }
         ],
         "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
         "name": "",
         "x": 1090,
         "y": 120,
@@ -2075,8 +2024,8 @@
         "id": "54567435891e7047",
         "type": "ui_led",
         "z": "071f8a4b90537c6d",
-        "order": 5,
         "group": "a60279a49b45287e",
+        "order": 5,
         "width": 0,
         "height": 0,
         "label": "Connection",
@@ -2095,8 +2044,6 @@
             }
         ],
         "allowColorForValueInMessage": false,
-        "shape": "circle",
-        "showGlow": false,
         "name": "",
         "x": 1090,
         "y": 300,
