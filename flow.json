@@ -1695,93 +1695,6 @@
         ]
     },
     {
-        "id": "862d68373312d99f",
-        "type": "change",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "filename",
-                "pt": "msg",
-                "to": "Point72_Camera_Settings/Info_Last Shot_Test_Camera.json",
-                "tot": "str"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 450,
-        "y": 1720,
-        "wires": [
-            [
-                "b79020ee65867521"
-            ]
-        ]
-    },
-    {
-        "id": "8ae010f1969a9451",
-        "type": "inject",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "15",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 250,
-        "y": 1720,
-        "wires": [
-            [
-                "862d68373312d99f"
-            ]
-        ]
-    },
-    {
-        "id": "b79020ee65867521",
-        "type": "dropbox",
-        "z": "071f8a4b90537c6d",
-        "dropbox": "648bd60a845b1eb0",
-        "filename": "",
-        "name": "Trade Floor Camera Shot Info",
-        "x": 715,
-        "y": 1720,
-        "wires": [
-            [
-                "8ea770a1490ddd85"
-            ]
-        ]
-    },
-    {
-        "id": "1840600fd072f08b",
-        "type": "image",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "width": "320",
-        "data": "payload.last_Shot_Thumb",
-        "dataType": "msg",
-        "thumbnail": false,
-        "active": false,
-        "pass": false,
-        "outputs": 0,
-        "x": 1280,
-        "y": 1620,
-        "wires": []
-    },
-    {
         "id": "6f9b5e45cddf303a",
         "type": "image",
         "z": "071f8a4b90537c6d",
@@ -1944,54 +1857,6 @@
         ]
     },
     {
-        "id": "c98f555b17d0c693",
-        "type": "ui_template",
-        "z": "071f8a4b90537c6d",
-        "d": true,
-        "group": "68b5dc8607ac2516",
-        "name": "",
-        "order": 14,
-        "width": "0",
-        "height": "0",
-        "format": "<img style='display:block; width:320px;height:213px;' id='base64image'\n       src='{{msg.payload}}' />",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "x": 1440,
-        "y": 1900,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "109fe2a2e708feeb",
-        "type": "change",
-        "z": "071f8a4b90537c6d",
-        "name": "",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.last_Shot_Thumb",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 1260,
-        "y": 1900,
-        "wires": [
-            [
-                "c98f555b17d0c693"
-            ]
-        ]
-    },
-    {
         "id": "c797cd894757b5c2",
         "type": "ui_led",
         "z": "071f8a4b90537c6d",
@@ -2072,20 +1937,6 @@
         "wires": [
             [
                 "1c0d10c342d3f183"
-            ]
-        ]
-    },
-    {
-        "id": "8ea770a1490ddd85",
-        "type": "subflow:7e1726d72b9faa8b",
-        "z": "071f8a4b90537c6d",
-        "name": "Test Camera Data",
-        "x": 990,
-        "y": 1720,
-        "wires": [
-            [
-                "1840600fd072f08b",
-                "109fe2a2e708feeb"
             ]
         ]
     }
